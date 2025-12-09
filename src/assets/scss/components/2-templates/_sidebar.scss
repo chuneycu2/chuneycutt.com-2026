@@ -2,5 +2,8 @@
 @use '../../base/mixins' as mixins;
 
 .sidebar {
-
+  @include mixins.media-breakpoint-up(md) {
+    position: sticky;
+    top: 2.25rem;
+  }
 }

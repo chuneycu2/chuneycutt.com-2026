@@ -6,7 +6,7 @@ export default function SkillsAndTools() {
         <div className="entry-container icon-development">
             {/* programmatically map through props to render each skill/tool */}
             <div className="accent-line"></div>
-            <IconDevelopment type={"skill-icon"} />
+            <IconDevelopment type={"top-icon"} />
             <h3>Development</h3>
             <div className="skills-container">
                 <div className="skills-category">

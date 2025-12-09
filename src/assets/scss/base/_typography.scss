@@ -54,6 +54,11 @@ a, .a {
   }
 }
 
+blockquote {
+  color: $gray;
+  transition: .4s;
+}
+
 ul {
   color: $gray;
   font-size: 1rem;

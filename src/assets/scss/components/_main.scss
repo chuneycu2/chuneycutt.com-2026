@@ -1,11 +1,20 @@
 @use '../_variables.scss' as *;
 
-main {
+html {
   background: $bg-gradient;
-  .container-fluid {
-    max-width: $xl;
-  }
-  .container-main {
-    padding: 2.25rem;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  body {
+    background-color: transparent;
+    main {
+      .container-fluid {
+        max-width: $xl;
+      }
+      .container-main {
+        padding: 2.25rem;
+        position: relative;
+      }
+    }
   }
 }
