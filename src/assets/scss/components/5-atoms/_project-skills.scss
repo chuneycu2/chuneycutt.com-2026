@@ -1,0 +1,24 @@
+@use '../../_variables.scss' as *;
+
+.project-skills {
+    flex-wrap: wrap;
+    gap: .65rem;
+    .skill {
+        border: 1px solid $gray;
+        border-radius: 2rem;
+        color: $gray;
+        font-size: .85rem;
+        padding: .35rem .85rem;
+        transition: .4s;
+        &.linked {
+            &:hover {
+                background-color: $teal;
+                border: 1px solid $teal;
+                transition: .4s;
+                a {
+                    color: $bg-purple;
+                }
+            }
+        }
+    }
+}

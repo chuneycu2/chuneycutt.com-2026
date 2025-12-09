@@ -1,6 +1,40 @@
 @use '../../variables' as *;
 @use '../../base/mixins' as mixins;
 
-.menu {
-
+.menu-container {
+    padding-top: 4.5rem;
+    .menu {
+        li {
+            transition: .4s;
+            a {
+                padding-left: 1rem;
+            }
+            &:before {
+                border-radius: 25px;
+                bottom: 1.125rem;
+                content: '';
+                display: flex;
+                height: .25rem;
+                left: 0;
+                transition: .4s;
+                width: 5px;
+            }
+            &.active {
+                transition: .4s;
+                a {
+                    color: $teal;
+                    position: relative;
+                    padding-left: 2.75rem;
+                }
+                &:before {
+                    border-radius: 25px;
+                    content: '';
+                    display: flex;
+                    height: .25rem;
+                    transition: .4s;
+                    width: 2rem;
+                }
+            }
+        }
+    }
 }

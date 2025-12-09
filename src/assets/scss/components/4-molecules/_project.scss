@@ -1,0 +1,38 @@
+@use '../../variables' as *;
+@use '../../base/mixins' as mixins;
+
+.section-entry {
+  &.project {
+    // Leave space to style /projects tiles
+    .entry-container {
+      .project-thumbnail {
+        padding-bottom: 1rem;
+        padding-right: 0;
+        @include mixins.media-breakpoint-up(sm) {
+          display: flex;
+          flex: 100%;
+          padding-bottom: 0;
+          padding-right: 1rem;
+        }
+        img {
+          align-self: flex-start;
+          height: auto;
+          width: 100%;
+        }
+      }
+      .project-info {
+        display: block;
+        @include mixins.media-breakpoint-up(sm) {
+          display: block;
+          flex: 1 1 auto;
+        }
+      }
+      .project-links {
+        padding-bottom: 0;
+      }
+    }
+  }
+  @include mixins.media-breakpoint-up(sm) {
+
+  }
+}

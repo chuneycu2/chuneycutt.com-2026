@@ -27,6 +27,12 @@
 @use 'components/3-organisms/menu.scss';
 @use 'components/3-organisms/section-entries.scss';
 // Import molecule-level components
-@use 'components/4-molecules/entry.scss';
+@use 'components/4-molecules/section-entry';
+@use 'components/4-molecules/experience';
+@use 'components/4-molecules/skill-tool';
+@use 'components/4-molecules/project';
+@use 'components/4-molecules/about';
 // Import atom-level components
 @use 'components/5-atoms/project-links.scss';
+@use 'components/5-atoms/project-skills.scss';
+@use 'components/5-atoms/icons.scss';

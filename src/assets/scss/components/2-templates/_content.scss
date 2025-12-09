@@ -6,4 +6,9 @@
     @include mixins.media-breakpoint-up(md) {
         padding: 0 1rem;
     }
+    .section-entries {
+        aside {
+            padding: 1rem 0;
+        }
+    }
 }

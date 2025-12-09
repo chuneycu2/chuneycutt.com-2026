@@ -1,0 +1,12 @@
+@use '../../variables' as *;
+@use '../../base/mixins' as mixins;
+
+.section-entry {
+  .about {
+    .bio-card {
+      .project-links {
+        padding: 0;
+      }
+    }
+  }
+}

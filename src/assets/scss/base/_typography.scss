@@ -15,7 +15,7 @@ h5, .h5 {
   color: $white;
   font-weight: $semibold;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 1.25;
   margin: 0;
   text-rendering: optimizeLegibility;
   transition: .4s;
@@ -39,6 +39,19 @@ p, .p {
   font-weight: $light;
   margin: 0;
   transition: .4s;
+}
+
+a, .a {
+  color: $gray;
+  transition: .4s;
+  &:hover {
+    color: $teal;
+    text-decoration: none;
+    transition: .4s;
+    &:before {
+      transition: .4s;
+    }
+  }
 }
 
 ul {
@@ -71,9 +84,11 @@ ul {
 .subhead {
   font-size: 1.25rem;
 }
+
 .uppercase {
   text-transform: uppercase;
 }
+
 ul.menu {
   color: $gray;
   font-size: 1.5rem;

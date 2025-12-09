@@ -1,0 +1,60 @@
+@use '../../variables' as *;
+@use '../../base/mixins' as mixins;
+
+.section-entry {
+    position: relative;
+    transition: .4s;
+    .entry-container {
+        position: relative;
+        z-index: 1;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: $regular;
+            padding-bottom: .25rem;
+        }
+        .entry-subtitle {
+            font-size: .85rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    // Hover states and decorations (sm+ only)
+    @include mixins.media-breakpoint-up(sm) {
+        // Faded background tile (experience, skills & tools, projects)
+        &:after {
+            background-color: transparent;
+            content: '';
+            display: block;
+            height: calc(100% + 2rem);
+            opacity: 0;
+            left: -1.25rem;
+            padding: 1rem;
+            position: absolute;
+            top: -1rem;
+            transition: .4s;
+            width: calc(100% + 2rem);
+            z-index: 0;
+        }
+        &:hover,
+        &.active {
+            cursor: pointer;
+            transition: .4s;
+            h3 {
+                color: $teal;
+            }
+            &:after {
+                background-color: $gray;
+                opacity: .15;
+                transition: .4s;
+            }
+            .skill {
+                border: 1px solid $teal;
+                color: $teal;
+                transition: .4s;
+                a {
+                    color: $teal;
+                }
+            }
+        }
+    }
+}

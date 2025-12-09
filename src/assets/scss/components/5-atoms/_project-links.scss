@@ -1,3 +1,35 @@
-.project-links {
+@use '../../_variables.scss' as *;
 
+.project-links {
+    padding: 1rem 0;
+    position: relative;
+    transition: .4s;
+    .link {
+        align-items: center;
+        display: flex;
+        position: relative;
+        svg {
+            transition: .4s;
+        }
+        &.external {
+            svg {
+                height: .75rem;
+                margin-right: .35rem;
+                width: .75rem;
+            }
+        }
+        &.internal {
+            svg {
+                height: .85rem;
+                margin-right: .25rem;
+                width: .85rem;
+            }
+        }
+        &:hover {
+            svg {
+                fill: $teal;
+                transition: .4s;
+            }
+        }
+    }
 }
