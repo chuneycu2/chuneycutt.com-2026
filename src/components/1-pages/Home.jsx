@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import Sidebar from "../2-templates/Sidebar.jsx";
 import Content from "../2-templates/Content.jsx";
 
