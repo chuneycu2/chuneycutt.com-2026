@@ -1,9 +1,9 @@
-export default async function homeLoader() {
+export default async function dataLoader() {
 
     // Fetch URL with timestamp for cache busting
     let url = 'https://www.chuneycutt.com/wp-json/wp/v2/posts/';
-    let timestamp = (new Date()).getTime();
-    url += '?time=' + timestamp;
+    //let timestamp = (new Date()).getTime();
+    //url += '?time=' + timestamp;
 
     try {
         const response = await fetch(url);

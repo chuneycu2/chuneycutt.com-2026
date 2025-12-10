@@ -1,22 +1,20 @@
-import { useState } from 'react';
+export default function Menu(props) {
 
-export default function Menu() {
-    const [active, setActive] = useState(false);
-    function toggleActive() {
-        setActive(prev => {
-            return !prev;
-        })
+    // Assemble menu items from component sections present in the data
+    const sections  = props.sections;
+    const menuItems = sections?.map(sec => (
+        <li key={sec.section_title}>
+            <a href={'#' + sec.section_title.replace(/\s/g, '')}>{sec.section_title}</a>
+        </li>
+    ));
+
+    if (sections) {
+        return (
+            <nav className="menu-container">
+                <ul className="menu">
+                    {menuItems}
+                </ul>
+            </nav>
+        )
     }
-    return (
-        <nav className="menu-container">
-            {/* programmatically add menu items based on section name */}
-            <ul className="menu">
-                <li className={active ? 'active' : ''}><a onClick={toggleActive} href="#experience">Experience</a></li>
-                <li><a href="#skillsAndTools">Skills & Tools</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#accolades">Accolades</a></li>
-            </ul>
-        </nav>
-    )
 }

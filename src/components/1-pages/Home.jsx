@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router";
 import Sidebar from "../2-templates/Sidebar.jsx";
 import Content from "../2-templates/Content.jsx";
 import DataParser from "../data/DataParser.js";
+import Footnote from "../3-organisms/Footnotes.jsx";
 
 export default function Home() {
 
@@ -13,9 +14,9 @@ export default function Home() {
 
     return (
         <div className="container-main home row m-0">
-            <Sidebar title={thisPage.title} intro={thisPage.intro} footnote={thisPage.footnote} />
+            <Sidebar name={thisPage.name} title={thisPage.title} intro={thisPage.intro} content={thisPage.components_react} />
             <Content content={thisPage.components_react} />
-            {/* TODO: add transitions between pages with useTransition */}
+            <Footnote footnotes={thisPage.footnotes}/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 @use '../_variables.scss' as *;
+@use '../base/mixins' as mixins;
 
 html {
   background: $bg-gradient;
@@ -14,6 +15,9 @@ html {
       .container-main {
         padding: 2.25rem;
         position: relative;
+        @include mixins.media-breakpoint-up(md) {
+          padding: 2.25rem 2.25rem 0 2.25rem;
+        }
       }
     }
   }

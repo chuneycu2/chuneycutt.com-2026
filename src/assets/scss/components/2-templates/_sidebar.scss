@@ -8,3 +8,14 @@
     top: 2.25rem;
   }
 }
+.footnotes {
+  border-top: 1px solid $gray;
+  @include mixins.media-breakpoint-up(md) {
+    border: none;
+    bottom: 2.5rem;
+    position: relative;
+  }
+  p {
+    font-size: .85rem;
+  }
+}
