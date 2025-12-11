@@ -48,7 +48,7 @@
           height: calc(100% - 1.75rem);
           left: -1px;
           position: absolute;
-          transition: .4s;
+          transition: .25s;
           width: 2px;
         }
       }
@@ -78,7 +78,7 @@
           .accent-line {
             &:before {
               background-color: $teal;
-              transition: .4s;
+              transition: .25s;
             }
           }
           svg.top-icon {

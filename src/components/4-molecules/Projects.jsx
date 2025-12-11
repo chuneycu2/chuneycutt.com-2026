@@ -2,7 +2,7 @@ import SampleImg from "../../assets/img/sample-project-thumbnail.jpg";
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
 
-export default function Projects() {
+export default function Projects(props) {
     {/* add logic to fetch thumbnail images from media API? or do this at top level? */}
     return (
         <div className="entry-container">

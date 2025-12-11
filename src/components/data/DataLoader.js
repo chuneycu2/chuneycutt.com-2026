@@ -1,9 +1,11 @@
-export default async function dataLoader() {
+export default async function DataLoader() {
 
-    // Fetch URL with timestamp for cache busting
     let url = 'https://www.chuneycutt.com/wp-json/wp/v2/posts/';
-    //let timestamp = (new Date()).getTime();
-    //url += '?time=' + timestamp;
+
+    // WPEngine Cloudflare cache is min-age 600s (10min)
+    // Recompile with timestamp to bust cache if needed during development:
+    // let timestamp = (new Date()).getTime();
+    // url += '?time=' + timestamp;
 
     try {
         const response = await fetch(url);

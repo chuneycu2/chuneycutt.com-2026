@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router";
 import App from './App'
 import Home from "./components/1-pages/Home";
 import Projects from "./components/1-pages/Projects";
-import dataLoader from "./components/data/dataLoader.js";
+import DataLoader from "./components/data/DataLoader.js";
 
 const router = createBrowserRouter([
     {
@@ -16,19 +16,19 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                loader: dataLoader,
+                loader: DataLoader,
                 HydrateFallback: () => <div></div>,
             },
             {
                 path: "projects",
                 Component: Projects,
-                loader: dataLoader,
+                loader: DataLoader,
                 HydrateFallback: () => <div></div>,
             },
             {
                 path: "projects/:slug",
                 Component: Home,
-                loader: dataLoader,
+                loader: DataLoader,
                 HydrateFallback: () => <div></div>,
             }
         ],
