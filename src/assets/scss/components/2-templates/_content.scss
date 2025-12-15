@@ -6,4 +6,7 @@
     @include mixins.media-breakpoint-up(md) {
         padding: 0 1rem;
     }
+    #observerTop {
+        height: 1px;
+    }
 }
