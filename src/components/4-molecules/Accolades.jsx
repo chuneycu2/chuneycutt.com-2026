@@ -1,6 +1,4 @@
-import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
-import IconQuote from "../5-atoms/icons/iconQuote.jsx";
-import CyrusPic from "../../assets/img/cyrus-pic.jpg";
+import IconQuote from "../5-atoms/icons/iconQuote";
 
 export default function Accolades(props) {
     const { content, media } = props;

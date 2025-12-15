@@ -2,7 +2,6 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router";
-import { Suspense } from "react";
 import DataAndMediaLoader from "./components/data/DataAndMediaLoader.js";
 
 import App from './App'
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
                 index: true,
                 Component: Home,
                 loader: DataAndMediaLoader,
-                HydrateFallback: LoadingElement
+                HydrateFallback: LoadingElement,
             },
             {
                 path: "projects",

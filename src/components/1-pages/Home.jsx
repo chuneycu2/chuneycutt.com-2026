@@ -1,9 +1,9 @@
 import { useLoaderData } from "react-router";
 
-import Sidebar from "../2-templates/Sidebar.jsx";
-import Content from "../2-templates/Content.jsx";
+import Sidebar from "../2-templates/Sidebar";
+import Content from "../2-templates/Content";
 import DataParser from "../data/DataParser.js";
-import Footnote from "../3-organisms/Footnotes.jsx";
+import Footnote from "../3-organisms/Footnotes";
 
 export default function Home() {
 
