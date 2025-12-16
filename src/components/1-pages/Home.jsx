@@ -24,7 +24,7 @@ export default function Home() {
                 inView ? setActive(false) : setActive(true);
             }}>
                 {({ref}) => (
-                    <section ref={ref} className={`sidebar ${slug} col-12 col-md-5 d-flex flex-column pl-0 pr-0 pr-md-5`}>
+                    <section ref={ref} className={`sidebar ${slug} ${isActive ? 'mobile-active' : ''} col-12 col-md-5 d-flex flex-column pl-0 pr-0 pr-md-5`}>
                         <Titles name={thisPage.name} title={thisPage.title} intro={thisPage.intro}/>
                         <Menu sections={thisPage.components_react} isActive={isActive} />
                     </section>
