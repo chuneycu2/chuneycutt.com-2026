@@ -22,6 +22,7 @@ html {
     main {
       .container-fluid {
         max-width: $xl;
+        position: relative;
       }
       .container-main {
         padding: 2.25rem;
