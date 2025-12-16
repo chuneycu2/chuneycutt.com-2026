@@ -1,16 +1,17 @@
 import { Link, scrollSpy } from 'react-scroll';
+import { InView } from 'react-intersection-observer'
 import { useEffect } from 'react';
 
 export default function Menu(props) {
+    const isActive = props.isActive;
 
     useEffect(() => {
         scrollSpy.update();
-    }, []); // Empty dependency array ensures it runs once on mount
+    }, []);
 
     const sections  = props.sections;
     const menuItems = sections?.map((sec) => (
         <li key={sec.section_title}>
-            {/* see options: https://www.npmjs.com/package/react-scroll */}
             <Link
                 activeClass="active"
                 spy={true}
@@ -32,14 +33,16 @@ export default function Menu(props) {
     if (sections) {
         return (
             <>
-                <nav className="menu-container d-none d-sm-block">
+                <nav className="menu-container d-none d-md-block">
                     <ul className="menu">
                         {menuItems}
                     </ul>
                 </nav>
-                <select id="mobileMenu" className="menu-mobile-container d-block d-sm-none">
-                    {mobileMenuItems}
-                </select>
+                    <nav className={`menu-mobile-container d-flex d-md-none ${isActive ? 'mobile-active' : ''}`}>
+                        <select id="mobileMenu" className="h2">
+                            {mobileMenuItems}
+                        </select>
+                    </nav>
             </>
         )
     }

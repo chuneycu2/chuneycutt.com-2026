@@ -5,7 +5,7 @@ import SectionEntries from "../3-organisms/SectionEntries"
 import ProjectLinks from "../5-atoms/ProjectLinks";
 
 export default function Content(props) {
-    const { content, media } = props;
+    const { content, media, isActive } = props;
 
     const sections = content.map((sec) => {
         const title = sec.section_title;
@@ -37,7 +37,7 @@ export default function Content(props) {
     });
 
     return (
-        <section className="content col-12 col-md-7 px-0">
+        <section id="content" className={`content col-12 col-md-7 px-0 ${isActive ? 'mobile-active' : ''}`}>
             {sections}
         </section>
     )

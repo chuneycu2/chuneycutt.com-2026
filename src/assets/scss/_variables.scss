@@ -27,10 +27,11 @@ $sizes-list: (
 $sizes: map.keys($sizes-list);
 
 // Colors
-$white     : #ffffff;
-$black     : #000000;
-$teal      : #3bffde;
-$gray      : #b9c9ef;
+$white        : #ffffff;
+$black        : #000000;
+$teal         : #3bffde;
+$gray         : #b9c9ef;
+$light-purple : #746d9e;
 
 $bg-purple : #463765;
 $bg-blue   : #345995;
@@ -39,13 +40,14 @@ $bg-gradient : linear-gradient(0deg,rgba(52, 89, 149, 1) 0%, rgba(70, 55, 101, 1
 
 // Color map
 $colors: (
-  "white"       : $white,
-  "black"       : $black,
-  "teal"        : $teal,
-  "gray"        : $gray,
-  "bg-purple"   : $bg-purple,
-  "bg-blue"     : $bg-blue,
-  "bg-gradient" : $bg-gradient
+  "white"        : $white,
+  "black"        : $black,
+  "teal"         : $teal,
+  "gray"         : $gray,
+  "bg-purple"    : $bg-purple,
+  "bg-blue"      : $bg-blue,
+  "bg-gradient"  : $bg-gradient,
+  "light-purple" : $light-purple,
 );
 
 // Typography

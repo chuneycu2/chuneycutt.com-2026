@@ -42,3 +42,42 @@
         }
     }
 }
+.menu-mobile-container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    &:before,
+    &:after {
+        background-color: $light-purple;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 45px;
+        z-index: 0;
+    }
+    &:before {
+        left: -2.25rem;
+    }
+    &:after {
+        right: -2.25rem;
+    }
+    &.mobile-active {
+        position: fixed;
+        top: 0;
+        width: calc(100% - 4.5rem);
+    }
+    select {
+        background-color: $light-purple;
+        color: $white;
+        font-size: 1.75rem;
+        left: -5px;
+        padding: 1rem 0;
+        position: relative;
+        width: 100%;
+        option {
+            position: relative;
+            left: 0;
+        }
+    }
+}
