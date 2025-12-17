@@ -35,7 +35,7 @@ export default async function DataAndMediaLoader() {
         let imageIDs = [];
 
         // check for specific component types that contain images
-        components?.forEach((component) => {
+        Object.values(components)?.forEach((component) => {
             if (component.acf_fc_layout === 'projects') {
                 projects = component.entries;
                 projects.map((project) => {

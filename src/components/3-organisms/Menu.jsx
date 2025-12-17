@@ -12,7 +12,7 @@ export default function Menu(props) {
         scrollSpy.update();
     }, []);
 
-    const navItems = sections?.map((sec) => (
+    const navItems = Object.values(sections)?.map((sec) => (
         <li key={sec.section_title}>
             <Link
                 activeClass="active"
@@ -27,7 +27,7 @@ export default function Menu(props) {
         </li>
     ));
 
-    const mobileNavItems = sections?.map((sec) => (
+    const mobileNavItems = Object.values(sections)?.map((sec) => (
         <option key={sec.section_title} value={sec.section_title.replace(/\s/g, '')}>
             {sec.section_title}
         </option>

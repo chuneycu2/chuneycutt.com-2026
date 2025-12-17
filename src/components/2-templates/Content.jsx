@@ -7,7 +7,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks";
 export default function Content(props) {
     const { content, media, isActive } = props;
 
-    const sections = content.map((sec) => {
+    const sections = Object.values(content)?.map((sec) => {
         const title = sec.section_title;
         const intro = sec.section_intro;
         const id = sec.section_title.replace(/\s/g, "");
