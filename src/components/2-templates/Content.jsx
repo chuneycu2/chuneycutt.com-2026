@@ -37,7 +37,7 @@ export default function Content(props) {
     });
 
     return (
-        <section id="content" className={`content col-12 col-md-7 px-0 ${isActive ? 'mobile-active' : ''}`}>
+        <section id="content" className={`content col-12 col-md-7 px-0`}>
             {sections}
         </section>
     )
