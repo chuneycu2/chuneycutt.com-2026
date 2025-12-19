@@ -68,11 +68,12 @@ ul {
   color: $gray;
   font-size: 1rem;
   font-weight: $light;
+  line-height: 1.5;
   list-style: none;
   margin: 0;
   padding-left: 1.25rem;
   li {
-    padding-bottom: .25rem;
+    padding-bottom: .5rem;
     position: relative;
     list-style: none;
     transition: .4s;
@@ -90,20 +91,25 @@ ul {
   }
 }
 
-// Global section content (for about, project overviews, etc)
-.section-content {
-  p, ul {
-    padding-bottom: 1rem;
+ol {
+  color: $gray;
+  font-size: 1rem;
+  font-weight: $light;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 1.25rem;
+  li {
+    padding-bottom: .5rem;
+    &::marker {
+      color: $teal;
+    }
   }
-  a {
-    color: $teal;
-  }
-  h4 {
-    font-family: $body;
-    font-size: 1.25rem;
-    font-weight: $xlight;
-    padding: 1rem 0;
-  }
+}
+
+code {
+  color: $teal;
+  font-size: .875rem;
+  position: relative;
 }
 
 // Utility classes
@@ -126,6 +132,64 @@ ul.menu {
     padding-bottom: .25rem;
     &:before {
       content: none;
+    }
+  }
+}
+
+// Global section content (for about, project overviews, etc)
+.section-content {
+  img {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  p, ul, ol {
+    padding-bottom: 1rem;
+  }
+  a {
+    color: $teal;
+    &:hover {
+      color: $white;
+    }
+  }
+  h4 {
+    font-family: $body;
+    font-size: 1.25rem;
+    font-weight: $xlight;
+    padding: 1rem 0;
+  }
+  figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: .5rem;
+    padding-top: 1rem;
+    row-gap: 1.25rem;
+    width: 100%;
+    img {
+      flex: 1 1 100%;
+      height: auto;
+      max-width: 100%;
+      min-width: 0;
+      @include mixins.media-breakpoint-up(sm) {
+        flex: 1 1 45%;
+      }
+      @include mixins.media-breakpoint-up(md) {
+        flex: 1 1 100%;
+      }
+      @include mixins.media-breakpoint-up(lg) {
+        flex: 1 1 45%;
+      }
+    }
+    figcaption {
+      color: $gray;
+      padding-bottom: 1rem;
+      font-family: $body;
+      font-size: .875rem;
+      font-weight: $light;
+      flex: 100%;
+      margin: 0 auto;
+      max-width: 550px;
+      text-align: center;
     }
   }
 }

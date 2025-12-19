@@ -3,19 +3,6 @@
 
 .project-archive {
 
-  .section-title {
-    // back home link
-    .project-links {
-      padding: 0 !important;
-      svg.icon {
-        position: relative;
-        right: 0;
-        transform: rotate(180deg);
-        top: 0;
-      }
-    }
-  }
-
   .project-cards {
     display: flex;
     flex-wrap: wrap;

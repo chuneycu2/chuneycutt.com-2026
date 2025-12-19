@@ -8,16 +8,33 @@
         padding-bottom: 0;
     }
     h1 {
-
+        padding-bottom: .25rem;
     }
     h2 {
-
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
     }
     .intro {
-
+        padding-top: 2rem;
     }
     .project-links {
-        padding-bottom: 0;
+        padding-top: 0 !important;
+        .link {
+            a {
+                font-size: 1rem;
+            }
+            &:first-child {
+                a {
+                    svg.icon {
+                        position: relative;
+                        right: 0;
+                        transform: rotate(180deg);
+                        top: 0;
+                    }
+                }
+            }
+        }
+
     }
     &.active {
         h2 {
@@ -53,6 +70,7 @@
         }
         .intro {
             font-size: 1rem;
+            padding: 0;
         }
         &.section {
             padding-bottom: 3rem;

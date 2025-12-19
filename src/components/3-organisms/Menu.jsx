@@ -12,20 +12,24 @@ export default function Menu(props) {
         scrollSpy.update();
     }, []);
 
-    const navItems = Object.values(sections)?.map((sec) => (
-        <li key={sec.section_title}>
-            <Link
-                activeClass="active"
-                spy={true}
-                to={sec.section_title.replace(/\s/g, '')}
-                smooth={true}
-                duration={500}
-                offset={-40}
-                spyThrottle={0}>
-                {sec.section_title}
-            </Link>
-        </li>
-    ));
+    const navItems = Object.values(sections)?.map((sec) => {
+        if (sec.section_title) {
+            return (
+                <li key={sec.section_title}>
+                    <Link
+                        activeClass="active"
+                        spy={true}
+                        to={sec.section_title.replace(/\s/g, '')}
+                        smooth={true}
+                        duration={500}
+                        offset={-40}
+                        spyThrottle={0}>
+                        {sec.section_title}
+                    </Link>
+                </li>
+            )
+        }
+    });
 
     const mobileNavItems = Object.values(sections)?.map((sec) => (
         <option key={sec.section_title} value={sec.section_title.replace(/\s/g, '')}>
@@ -36,7 +40,7 @@ export default function Menu(props) {
     if (sections) {
         return (
             <>
-                <DesktopNav navItems={navItems} />
+                <DesktopNav navItems={navItems}/>
                 {/*<MobileNav mobileNavItems={mobileNavItems} isActive={isActive} />*/}
             </>
         )

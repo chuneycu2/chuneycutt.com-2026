@@ -4,9 +4,9 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 0;
   @include mixins.media-breakpoint-up(md) {
-    height: 100%;
     padding-right: 3rem;
     position: sticky;
     top: 2.25rem;
@@ -18,15 +18,30 @@
     position: relative;
     top: 50px;
   }
-}
-.footnotes {
-  border-top: 1px solid $gray;
-  @include mixins.media-breakpoint-up(md) {
-    border: none;
-    bottom: 2.5rem;
-    position: relative;
-  }
-  p {
-    font-size: .85rem;
+  .social-links {
+    border-bottom: 1px solid $gray;
+    padding: 0 0 2.5rem 0;
+    @include mixins.media-breakpoint-up(md) {
+      border: none;
+      padding: 3.5rem 0 0 0;
+    }
+    a {
+      padding-right: 1rem;
+      svg {
+        height: 25px;
+        fill: $gray;
+        transition: .4s;
+        width: 25px;
+        &.linkedin {
+          max-height: 23px;
+        }
+      }
+      &:hover {
+        svg {
+          fill: $teal;
+          transition: .4s;
+        }
+      }
+    }
   }
 }

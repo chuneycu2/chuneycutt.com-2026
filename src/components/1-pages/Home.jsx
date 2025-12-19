@@ -1,12 +1,13 @@
 import { useLoaderData } from "react-router";
 import { InView } from 'react-intersection-observer'
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
+import DataParser from "../data/DataParser";
+
+import Titles from "../2-templates/Titles";
+import Menu from "../3-organisms/Menu";
+import SocialLinks from "../5-atoms/SocialLinks";
 import Content from "../2-templates/Content";
-import DataParser from "../data/DataParser.js";
-import Footnote from "../3-organisms/Footnotes";
-import Titles from "../2-templates/Titles.jsx";
-import Menu from "../3-organisms/Menu.jsx";
 
 export default function Home() {
     const [isActive, setActive] = useState(null);
@@ -17,6 +18,13 @@ export default function Home() {
     const slug = pageData[0].slug;
     const mediaData = data[0]?.media;
     const thisPage = pageData[0].acf;
+    console.log(thisPage);
+
+    // Set page title
+    useEffect(() => {
+        if (slug === 'home') document.title = 'Cyrus Huneycutt | Developer + Designer';
+        else document.title = 'Cyrus Huneycutt | ' + thisPage.name;
+    }, [])
 
     return (
         <div className={`container-main ${slug} row m-0`}>
@@ -29,14 +37,15 @@ export default function Home() {
                     <section
                         ref={ref}
                         className={`sidebar ${slug} col-12 col-md-5`}>
-                        <Titles name={thisPage.name} title={thisPage.title} intro={thisPage.intro}/>
+                        <Titles name={thisPage.name} title={thisPage.title} intro={thisPage.intro} slug={slug} link={thisPage.project_link} />
                         <Menu sections={thisPage.components_react} isActive={isActive} />
+                        <SocialLinks links={thisPage.social_links} />
                     </section>
                 )}
             </InView>
 
-            <Content content={thisPage?.components_react} media={mediaData ? mediaData : ''} isActive={isActive} />
-            <Footnote footnotes={thisPage?.footnotes}/>
+            <Content content={thisPage?.components_react} media={mediaData ? mediaData : ''} isActive={isActive} footnotes={thisPage?.footnotes} />
+            {/*<Footnote footnotes={thisPage?.footnotes}/>*/}
         </div>
     )
 }

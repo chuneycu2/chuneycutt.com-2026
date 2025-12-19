@@ -5,13 +5,13 @@
   transition: .4s;
   &:hover {
     transition: .4s;
-    .section-entry:not(.about):not(.skills-and-tools):not(.accolades) {
+    .section-entry:not(.about):not(.skills-and-tools):not(.accolades):not(.overview-section) {
       opacity: .45;
       transition: .4s;
     }
   }
 
-  .section-entry {
+  .section-entry:not(.overview-section) {
 
     // Faded background lightbox
     &:after {

@@ -13,4 +13,10 @@
         position: relative;
         margin-top: 70px;
     }
+    .footnotes {
+        border-top: 1px solid $gray;
+        p {
+            font-size: .85rem;
+        }
+    }
 }

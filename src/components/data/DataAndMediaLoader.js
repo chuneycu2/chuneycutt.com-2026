@@ -2,7 +2,7 @@ export default async function DataAndMediaLoader() {
 
     // WPEngine Cloudflare cache is min-age 600s (10min)
     // Recompile endpoints with a timestamp to bust cache if needed during development:
-    // let timestamp = (new Date()).getTime();
+    let timestamp = (new Date()).getTime();
     // ...endpoint += '?time=' + timestamp;
 
     let domain = 'https://www.chuneycutt.com/';
@@ -53,7 +53,7 @@ export default async function DataAndMediaLoader() {
         // Fetch data for each imageID sequentially and then return the responses together
         const fetchMedia = async (ids) => {
             try {
-                const fetchPromises = ids.map(id => fetch(domain + mediaEndpoint + id));
+                const fetchPromises = ids.map(id => fetch(domain + mediaEndpoint + id + '?time=' + timestamp));
                 const responses = await Promise.all(fetchPromises);
                 // convert all responses to JSON (another set of promises)
                 const data = await Promise.all(responses.map(res => {
