@@ -22,9 +22,7 @@ export default function Titles(props) {
                 {props.name && <h1>{props.name}</h1>}
                 {props.title && <h2>{props.title}</h2>}
                 {props.slug !== 'home' && <ProjectLinks links={links} />}
-                <p className="intro">
-                    {props.intro}
-                </p>
+                {props.intro && <p className="intro">{props.intro}</p>}
             </div>
         </>
     )

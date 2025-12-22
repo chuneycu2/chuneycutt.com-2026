@@ -15,10 +15,10 @@
       flex: 1 1 100%;
       position: relative;
       @include mixins.media-breakpoint-up(sm) {
-        flex: 1 1 45%;
+        flex: 0 1 48%;
       }
       @include mixins.media-breakpoint-up(lg) {
-        flex: 1 1 30%;
+        flex: 0 1 31%;
       }
       .entry-container {
         .card-image {
