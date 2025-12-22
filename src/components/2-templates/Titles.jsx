@@ -15,13 +15,24 @@ export default function Titles(props) {
             link_target : "_blank"
         }]
 
+    const link = [
+        {
+            link_text : "Project Archive",
+            link_url : "/projects",
+            link_target : "_self"
+        }];
+
+    const linkStructure = () => {
+        if (props.link) return <ProjectLinks links={links} />
+        else return <ProjectLinks links={link} />
+    }
+
     return (
         <>
             <div className="title-container">
-                {/* programmatically add title info based on page URL */}
                 {props.name && <h1>{props.name}</h1>}
                 {props.title && <h2>{props.title}</h2>}
-                {props.slug !== 'home' && <ProjectLinks links={links} />}
+                {linkStructure()}
                 {props.intro && <p className="intro">{props.intro}</p>}
             </div>
         </>

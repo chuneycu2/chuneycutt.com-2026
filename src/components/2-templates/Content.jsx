@@ -40,7 +40,7 @@ export default function Content(props) {
     });
 
     return (
-        <section id="content" className={`content col-12 col-md-7 px-0`}>
+        <section id="content" className={`content col-12 col-md-8 px-0`}>
             {sections}
             {slug !== 'home' && <ProjectLinks links={[
                 {

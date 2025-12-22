@@ -35,7 +35,7 @@ export default function Home() {
                 {({ref}) => (
                     <section
                         ref={ref}
-                        className={`sidebar ${slug} col-12 col-md-5`}>
+                        className={`sidebar ${slug} col-12 col-md-4`}>
                         <Titles name={thisPage.name} title={thisPage.title} intro={thisPage.intro} slug={slug}
                                 link={thisPage.project_link}/>
                         <Menu sections={thisPage.components_react} isActive={isActive}/>
