@@ -47,7 +47,7 @@ export default function Content(props) {
                     link_text : "Back to Project Archive",
                     link_url : "/projects",
                     link_target : "_self",
-                    classname : "project-archive"
+                    classname : "project-archive d-flex justify-content-center"
                 }
             ]} />}
             <Footnote footnotes={footnotes}/>

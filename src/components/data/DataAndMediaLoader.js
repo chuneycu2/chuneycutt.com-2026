@@ -84,6 +84,7 @@ export default async function DataAndMediaLoader() {
         const pages = await Promise.all([
             fetchPostsAndMedia()
         ]);
+        console.log('data fetched');
         return pages;
     }
 

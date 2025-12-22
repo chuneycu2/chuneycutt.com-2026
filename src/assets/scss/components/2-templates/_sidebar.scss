@@ -20,7 +20,7 @@
   }
   .social-links {
     border-bottom: 1px solid $gray;
-    padding: 0 0 2.5rem 0;
+    padding: 2.5rem 0;
     @include mixins.media-breakpoint-up(md) {
       border: none;
       padding: 3.5rem 0 0 0;

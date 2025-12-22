@@ -2,7 +2,6 @@ import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 import React from "react";
 
 export default function Titles(props) {
-    console.log(props);
 
     const links = [
         {

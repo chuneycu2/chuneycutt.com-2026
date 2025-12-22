@@ -233,7 +233,7 @@ ul.menu {
       top: 0;
       transition: .4s;
       width: 100%;
-      z-index: 0;
+      z-index: -1;
       @include mixins.media-breakpoint-up(sm) {
 
       }

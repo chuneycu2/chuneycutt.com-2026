@@ -7,7 +7,7 @@
     .entry-container {
       // Timeline
       border-left: 2px solid $gray;
-      display: flex;
+      //display: flex;
       margin-left: .25rem;
       padding-left: 1.25rem;
       position: relative;
@@ -25,8 +25,8 @@
         width: 1rem;
       }
       .entry-subtitle {
-        padding-bottom: .75rem;
-        padding-left: 1rem;
+        padding-bottom: .5rem;
+        //padding-left: 1rem;
         position: relative;
         top: -2px;
         font-size: .875rem;
@@ -34,16 +34,16 @@
           font-weight: $medium;
         }
         @include mixins.media-breakpoint-up(lg) {
-          padding-left: 1.125rem;
+          //padding-left: 1.125rem;
         }
       }
       .entry-description {
         font-size: .875rem;
       }
       .role-details {
-        padding-left: 1rem;
+        //padding-left: 1rem;
         position: relative;
-        top: -3px;
+        //top: -3px;
         @include mixins.media-breakpoint-up(md) {
           padding-left: 0;
         }
