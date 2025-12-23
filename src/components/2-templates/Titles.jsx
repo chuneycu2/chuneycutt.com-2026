@@ -24,12 +24,12 @@ export default function Titles(props) {
 
     const linkStructure = () => {
         if (props.link) return <ProjectLinks links={links} />
-        else return <ProjectLinks links={link} />
+        else if (props.slug !== 'home') return <ProjectLinks links={link} />
     }
 
     return (
         <>
-            <div className="title-container">
+            <div className="title-container fade fade-right">
                 {props.name && <h1>{props.name}</h1>}
                 {props.title && <h2>{props.title}</h2>}
                 {linkStructure()}

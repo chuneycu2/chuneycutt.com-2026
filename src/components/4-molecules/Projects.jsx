@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import ProjectSkills from "../5-atoms/ProjectSkills";
 
 
@@ -15,7 +17,11 @@ export default function Projects(props) {
             <Link to={content.project_link}>
                 <div className="row p-0 m-0">
                     <div className="project-thumbnail col-12 col-sm-3 pl-0 pr-0 pr-sm-3">
-                        <img src={media && projectImage[0].source_url} alt={media && projectImage[0].alt_text}/>
+                        <LazyLoadImage
+                            alt={media && projectImage[0].alt_text}
+                            height="100"
+                            src={media && projectImage[0].source_url}
+                            width="200" />
                     </div>
                     <div className="project-info col-12 col-sm-9 px-0">
                         {content.project_title && <h3>{content.project_title}</h3>}

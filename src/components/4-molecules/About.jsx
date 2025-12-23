@@ -1,5 +1,5 @@
-import React from "react";
 import DOMPurify from 'dompurify';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 import CyrusPic from "../../assets/img/cyrus-pic.jpg";
@@ -15,7 +15,11 @@ export default function About(props) {
 
     const bioCard = content.about_me ?
         <div className="bio-card d-flex pb-4">
-            <img src={CyrusPic} alt="Cyrus Huneycutt headshot"/>
+            <LazyLoadImage
+                alt="Cyrus Huneycutt headshot"
+                height="75"
+                src={CyrusPic && CyrusPic}
+                width="75" />
             <div className="bio">
                 <h3>Cyrus Huneycutt</h3>
                 <p className="entry-subtitle">{content.about_me.location}</p>

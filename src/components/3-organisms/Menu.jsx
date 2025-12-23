@@ -9,7 +9,9 @@ export default function Menu(props) {
     const isActive = props.isActive;
 
     useEffect(() => {
-        scrollSpy.update();
+        setTimeout(function() {
+            scrollSpy.update();
+        }, 500);
     }, []);
 
     const navItems = Object.values(sections)?.map((sec) => {

@@ -10,7 +10,7 @@ export default function DesktopNav(props) {
     }, []);
 
     return (
-        <nav className="menu-container d-none d-md-block">
+        <nav className="menu-container d-none d-md-block fade fade-right">
             <ul className="menu">
                 {navItems}
             </ul>

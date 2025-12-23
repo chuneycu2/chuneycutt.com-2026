@@ -21,7 +21,7 @@ export default function Projects() {
     return (
         <div className="container-main project-archive m-0">
             <section className="row d-flex align-items-top p-0 m-0">
-                <div className="title-container col-12 col-md-5 col-lg-4 pl-0 pr-4 pb-3 pb-md-0">
+                <div className="title-container col-12 col-md-5 col-lg-4 pl-0 pr-4 pb-3 pb-md-0 fade fade-right">
                     <h1 className="pb-1">{thisPage.title ? thisPage.title : 'Project Archive'}</h1>
                     <ProjectLinks links={[
                         {
@@ -37,7 +37,7 @@ export default function Projects() {
                     </div>
                 }
             </section>
-            <section className="project-cards section-entries row px-0 mx-0">
+            <section className="project-cards section-entries row px-0 mx-0 fade fade-in">
                 <ProjectCard content={thisPage.components_react} media={mediaData} />
             </section>
         </div>
