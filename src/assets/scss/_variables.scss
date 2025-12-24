@@ -2,62 +2,62 @@
 
 // Grid (Bootstrap breakpoints)
 $grid-breakpoints: (
-    xs  : 0,
-    sm  : 576px,
-    md  : 768px,
-    lg  : 992px,
-    xl  : 1200px,
-    xxl : 1700px
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1700px,
 );
 
-$sm  : 576px;
-$md  : 768px;
-$lg  : 992px;
-$xl  : 1200px;
-$xxl : 1700px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1700px;
 
 // Sizing classes
 $sizes-list: (
-    25   : 25%,
-    50   : 50%,
-    75   : 75%,
-    100  : 100%,
-    auto : auto
+	25: 25%,
+	50: 50%,
+	75: 75%,
+	100: 100%,
+	auto: auto,
 );
 $sizes: map.keys($sizes-list);
 
 // Colors
-$white        : #ffffff;
-$black        : #000000;
-$teal         : #3bffde;
-$gray         : #b9c9ef;
-$light-purple : #746d9e;
+$white: #ffffff;
+$black: #000000;
+$teal: #3bffde;
+$gray: #b9c9ef;
+$light-purple: #746d9e;
 
-$bg-purple : #463765;
-$bg-blue   : #345995;
+$bg-purple: #312460;
+$bg-blue: #275893;
 
-$bg-gradient : linear-gradient(0deg, rgba(52, 89, 149, 1) 0%, rgba(70, 55, 101, 1) 90%);
+$bg-gradient: linear-gradient(0deg, $bg-blue 0%, $bg-purple 90%);
 
 // Color map
 $colors: (
-  "white"        : $white,
-  "black"        : $black,
-  "teal"         : $teal,
-  "gray"         : $gray,
-  "bg-purple"    : $bg-purple,
-  "bg-blue"      : $bg-blue,
-  "bg-gradient"  : $bg-gradient,
-  "light-purple" : $light-purple,
+	"white": $white,
+	"black": $black,
+	"teal": $teal,
+	"gray": $gray,
+	"bg-purple": $bg-purple,
+	"bg-blue": $bg-blue,
+	"bg-gradient": $bg-gradient,
+	"light-purple": $light-purple,
 );
 
 // Typography
-$headline : 'Oxygen', Arial, sans-serif;
-$body     : 'Inter', Arial, sans-serif;
+$headline: "Oxygen", Arial, sans-serif;
+$body: "Inter", Arial, sans-serif;
 
 // Font weights
-$xlight   : 200;
-$light    : 300;
-$regular  : 400;
-$medium   : 500;
-$semibold : 600;
-$bold     : 700;
+$xlight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;

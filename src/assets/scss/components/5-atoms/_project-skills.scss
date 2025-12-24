@@ -1,24 +1,22 @@
-@use '../../_variables.scss' as *;
+@use "../../_variables.scss" as *;
 
 .project-skills {
-    flex-wrap: wrap;
-    gap: .65rem;
-    .skill {
-        border: 1px solid $gray;
-        border-radius: 2rem;
-        color: $gray;
-        font-size: .75rem;
-        padding: .45rem .85rem .3rem .85rem;
-        transition: .4s;
-        &.linked {
-            &:hover {
-                background-color: $teal;
-                border: 1px solid $teal;
-                transition: .4s;
-                a {
-                    color: $bg-purple;
-                }
-            }
-        }
-    }
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	.skill {
+		border: 1px solid $gray;
+		border-radius: 2rem;
+		color: $gray;
+		font-size: 0.75rem;
+		padding: 0.45rem 0.85rem 0.3rem 0.85rem;
+		transition: 0.4s;
+		&.linked {
+			&:hover {
+				background-color: $teal;
+				border: 1px solid $teal;
+				color: $bg-purple !important;
+				transition: 0.4s;
+			}
+		}
+	}
 }

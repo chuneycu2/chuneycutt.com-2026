@@ -1,250 +1,271 @@
-@use '../_variables' as *;
-@use '../base/mixins' as mixins;
+@use "../_variables" as *;
+@use "../base/mixins" as mixins;
 
 html,
 body {
-  font-family: $body;
+	font-family: $body;
 }
 
 // Headers
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
-  color: $white;
-  font-weight: $semibold;
-  letter-spacing: .5px;
-  line-height: 1.25;
-  margin: 0;
-  text-rendering: optimizeLegibility;
-  transition: .4s;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+	color: $white;
+	font-weight: $semibold;
+	letter-spacing: 0.5px;
+	line-height: 1.25;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+	transition: 0.4s;
 }
 
-h1, .h1 {
-  font-family: $headline;
-  font-size: 2.5rem;
-  font-weight: $regular;
+h1,
+.h1 {
+	font-family: $headline;
+	font-size: 2.5rem;
+	font-weight: $regular;
 }
 
-h2, .h2 {
-  font-family: $body;
-  font-size: 1.75rem;
-  font-weight: $xlight;
+h2,
+.h2 {
+	font-family: $body;
+	font-size: 1.75rem;
+	font-weight: $xlight;
 }
 
-p, .p {
-  color: $gray;
-  font-size: 1rem;
-  font-weight: $light;
-  line-height: 1.5;
-  margin: 0;
-  transition: .4s;
+p,
+.p {
+	color: $gray;
+	font-size: 1rem;
+	font-weight: $light;
+	line-height: 1.5;
+	margin: 0;
+	transition: 0.4s;
 }
 
-a, .a {
-  color: $gray;
-  transition: .4s;
-  &:hover {
-    color: $teal;
-    text-decoration: none;
-    transition: .4s;
-    &:before {
-      transition: .4s;
-    }
-  }
+a,
+.a {
+	color: $teal;
+	transition: 0.4s;
+	&:hover {
+		color: $white;
+		text-decoration: none;
+		transition: 0.4s;
+		&:before {
+			transition: 0.4s;
+		}
+	}
 }
 
 blockquote {
-  color: $gray;
-  font-family: $body;
-  font-size: 1rem;
-  font-weight: $light;
-  line-height: 1.5;
-  transition: .4s;
+	color: $gray;
+	font-family: $body;
+	font-size: 1rem;
+	font-weight: $light;
+	line-height: 1.5;
+	transition: 0.4s;
 }
 
 ul {
-  color: $gray;
-  font-size: 1rem;
-  font-weight: $light;
-  line-height: 1.5;
-  list-style: none;
-  margin: 0;
-  padding-left: 1.25rem;
-  li {
-    padding-bottom: .5rem;
-    position: relative;
-    list-style: none;
-    transition: .4s;
-    &:before {
-      background-color: $teal;
-      border-radius: 50%;
-      content: "";
-      display: block;
-      height: .45rem;
-      left: -18px;
-      position: absolute;
-      top: 8px;
-      width: .45rem;
-    }
-  }
+	color: $gray;
+	font-size: 1rem;
+	font-weight: $light;
+	line-height: 1.5;
+	list-style: none;
+	margin: 0;
+	padding-left: 1.25rem;
+	li {
+		padding-bottom: 0.5rem;
+		position: relative;
+		list-style: none;
+		transition: 0.4s;
+		&:before {
+			background-color: $teal;
+			border-radius: 50%;
+			content: "";
+			display: block;
+			height: 0.45rem;
+			left: -18px;
+			position: absolute;
+			top: 8px;
+			width: 0.45rem;
+		}
+	}
 }
 
 ol {
-  color: $gray;
-  font-size: 1rem;
-  font-weight: $light;
-  line-height: 1.5;
-  margin: 0;
-  padding-left: 1.25rem;
-  li {
-    padding-bottom: .5rem;
-    &::marker {
-      color: $teal;
-    }
-  }
+	color: $gray;
+	font-size: 1rem;
+	font-weight: $light;
+	line-height: 1.5;
+	margin: 0;
+	padding-left: 1.25rem;
+	li {
+		padding-bottom: 0.5rem;
+		&::marker {
+			color: $teal;
+		}
+	}
 }
 
 code {
-  color: $teal;
-  font-size: .875rem;
-  position: relative;
+	color: $teal;
+	font-size: 0.875rem;
+	position: relative;
 }
 
 // Utility classes
 .subhead {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 // Project pages menu
 ul.menu {
-  color: $gray;
-  font-size: 1.25rem;
-  font-weight: $regular;
-  list-style: none;
-  padding: 0;
-  li {
-    padding-bottom: .25rem;
-    &:before {
-      content: none;
-    }
-  }
+	color: $gray;
+	font-size: 1.25rem;
+	font-weight: $regular;
+	list-style: none;
+	padding: 0;
+	li {
+		padding-bottom: 0.25rem;
+		&:before {
+			content: none;
+		}
+	}
 }
 
-// Global section content (for about, project overviews, etc)
-.section-content {
-  img {
-    width: 100%;
-  }
-  p, ul, ol {
-    font-size: 1rem;
-    font-weight: $light;
-    padding-bottom: 1rem;
-  }
-  a {
-    color: $teal;
-    //font-weight: $bold;
-    &:hover {
-      color: $white;
-    }
-  }
-  h4 {
-    font-family: $body;
-    font-size: 1.25rem;
-    font-weight: $xlight;
-    padding: 1rem 0;
-  }
-  figure {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 0;
-    justify-content: center;
-    margin: 1rem 0 2rem 0;
-    padding-top: 1rem;
-    position: relative;
-    row-gap: .85rem;
-    width: 100%;
-    @include mixins.media-breakpoint-up(sm) {
-      column-gap: .25rem;
-    }
-    @include mixins.media-breakpoint-up(md) {
+.section-entry {
+	// Global section content
+	.section-content {
+		img {
+			height: auto;
+			width: 100%;
+		}
+		p,
+		ul,
+		ol {
+			font-size: 1rem;
+			font-weight: $light;
+			padding-bottom: 1rem;
+		}
+		a {
+			color: $teal;
+			//font-weight: $bold;
+			&:hover {
+				color: $white;
+			}
+		}
+		h4 {
+			font-family: $body;
+			font-size: 1.25rem;
+			font-weight: $xlight;
+			padding: 1rem 0;
+		}
+		figure {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			column-gap: 0;
+			justify-content: center;
+			margin: 1rem 0 2rem 0;
+			padding-top: 1rem;
+			position: relative;
+			row-gap: 0.85rem;
+			width: 100%;
+			@include mixins.media-breakpoint-up(sm) {
+				column-gap: 0.25rem;
+			}
+			@include mixins.media-breakpoint-up(md) {
+			}
+			@include mixins.media-breakpoint-up(lg) {
+				column-gap: 0;
+			}
+			img {
+				flex: 0 1 98%;
+				height: auto;
+				max-width: 100%;
+				min-width: 0;
+				//padding: 1rem 0 0 0;
+				@include mixins.media-breakpoint-up(sm) {
+					flex: 0 1 48%;
+				}
+				@include mixins.media-breakpoint-up(md) {
+					flex: 0 1 98%;
+				}
+				@include mixins.media-breakpoint-up(lg) {
+					flex: 0 1 49%;
+				}
+				&.full {
+					@include mixins.media-breakpoint-up(sm) {
+						flex: 0 1 99%;
+					}
+				}
+			}
+			figcaption {
+				color: $gray;
+				font-family: $body;
+				font-size: 0.875rem;
+				font-weight: $light;
+				flex: 100%;
+				margin: 0 auto;
+				//max-width: 550px;
+				padding: 0.25rem 1.25rem 1.25rem;
+				text-align: center;
+				z-index: 2;
+				@include mixins.media-breakpoint-up(sm) {
+					padding: 0.25rem 1.25rem 0.5rem 1.25rem;
+				}
+				@include mixins.media-breakpoint-up(md) {
+					padding: 0.25rem 1.25rem 1.25rem;
+				}
+			}
+			&:after {
+				background-color: $gray;
+				border-radius: 0.25rem;
+				border-top: 1px solid $white;
+				box-shadow: 0 1px 2px $black;
+				content: "";
+				display: block;
+				height: 100%;
+				opacity: 0.15;
+				left: 0;
+				padding: 1rem;
+				position: absolute;
+				top: 0;
+				transition: 0.4s;
+				width: 100%;
+				z-index: -1;
+				@include mixins.media-breakpoint-up(sm) {
+				}
+				@include mixins.media-breakpoint-up(md) {
+					top: 0;
+				}
+			}
+		}
+		strong {
+			color: $white;
+			font-weight: $bold;
+		}
+	}
 
-    }
-    @include mixins.media-breakpoint-up(lg) {
-      column-gap: 0;
-    }
-    img {
-      flex: 0 1 98%;
-      height: auto;
-      max-width: 100%;
-      min-width: 0;
-      //padding: 1rem 0 0 0;
-      @include mixins.media-breakpoint-up(sm) {
-        flex: 0 1 48%;
-      }
-      @include mixins.media-breakpoint-up(md) {
-        flex: 0 1 98%;
-      }
-      @include mixins.media-breakpoint-up(lg) {
-        flex: 0 1 49%;
-      }
-      &.full {
-        @include mixins.media-breakpoint-up(sm) {
-          flex: 0 1 99%;
-        }
-      }
-    }
-    figcaption {
-      color: $gray;
-      font-family: $body;
-      font-size: .875rem;
-      font-weight: $light;
-      flex: 100%;
-      margin: 0 auto;
-      max-width: 550px;
-      padding: .25rem 1.25rem 1.25rem;
-      text-align: center;
-      z-index: 2;
-      @include mixins.media-breakpoint-up(sm) {
-        padding: .25rem 1.25rem .5rem 1.25rem;
-      }
-      @include mixins.media-breakpoint-up(md) {
-        padding: .25rem 1.25rem 1.25rem;
-      }
-    }
-    &:after {
-      background-color: $gray;
-      border-radius: .25rem;
-      border-top: 1px solid $white;
-      box-shadow: 0 1px 2px $black;
-      content: '';
-      display: block;
-      height: 100%;
-      opacity: .15;
-      left: 0;
-      padding: 1rem;
-      position: absolute;
-      top: 0;
-      transition: .4s;
-      width: 100%;
-      z-index: -1;
-      @include mixins.media-breakpoint-up(sm) {
-
-      }
-      @include mixins.media-breakpoint-up(md) {
-        top: 0;
-      }
-    }
-  }
-  strong {
-    color: $white;
-    font-weight: $bold;
-  }
+	&.overview-section {
+		p,
+		a,
+		ul,
+		ol,
+		li {
+			font-size: 1.125rem;
+		}
+	}
 }
-

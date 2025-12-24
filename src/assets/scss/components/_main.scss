@@ -1,40 +1,44 @@
-@use '../_variables.scss' as *;
-@use '../base/mixins' as mixins;
+@use "../_variables.scss" as *;
+@use "../base/mixins" as mixins;
 
 html {
-  background: $bg-gradient;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: .4s;
-  body {
-    background-color: transparent;
-    transition: .4s;
+	background: $bg-gradient;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.4s;
+	body {
+		background-color: transparent;
+		transition: 0.4s;
 
-    // Project root styles
-    #root {
-      animation: fadeIn .5s ease-in forwards;
-      transition: .4s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+		// Project root styles
+		#root {
+			animation: fadeIn 0.5s ease-in forwards;
+			transition: 0.4s;
+		}
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
 
-    main {
-      .container-fluid {
-        max-width: $xl;
-        position: relative;
-        transition: .4s;
-      }
-      .container-main {
-        padding: 2.25rem;
-        position: relative;
-        transition: .4s;
-        @include mixins.media-breakpoint-up(md) {
-          padding: 2.25rem 2.25rem 0 2.25rem;
-        }
-      }
-    }
-  }
+		main {
+			.container-fluid {
+				max-width: 1300px;
+				position: relative;
+				transition: 0.4s;
+			}
+			.container-main {
+				padding: 2.25rem;
+				position: relative;
+				transition: 0.4s;
+				@include mixins.media-breakpoint-up(md) {
+					padding: 2.25rem 2.25rem 0 2.25rem;
+				}
+			}
+		}
+	}
 }

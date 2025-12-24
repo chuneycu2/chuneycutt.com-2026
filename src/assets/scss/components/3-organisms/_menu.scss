@@ -1,84 +1,98 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
-.menu-container {
-    padding-top: 3rem;
-    .menu {
-        li {
-            display: flex;
-            a {
-                align-items: center;
-                display: flex;
-                position: relative;
-                &:before {
-                    background-color: $gray;
-                    border-radius: 25px;
-                    content: '';
-                    height: .25rem;
-                    left: 0;
-                    position: relative;
-                    transition: .4s;
-                    width: 0;
-                }
-                &:hover {
-                    color: $teal;
-                    cursor: pointer;
-                }
-                &.active {
-                    color: $teal;
-                    position: relative;
-                    transition: .4s;
-                    &:before {
-                        background-color: $teal;
-                        border-radius: 25px;
-                        content: '';
-                        display: flex;
-                        height: .25rem;
-                        margin-right: .5rem;
-                        transition: .4s;
-                        width: 2rem;
-                    }
-                }
-            }
-        }
-    }
+.sidebar {
+	.menu-container {
+		border-top: 1px solid $gray;
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		transition: none;
+		.menu {
+			li {
+				display: flex;
+				a {
+					align-items: center;
+					display: flex;
+					position: relative;
+					&:before {
+						background-color: $gray;
+						border-radius: 25px;
+						content: "";
+						height: 0.25rem;
+						left: 0;
+						position: relative;
+						transition: 0.4s;
+						width: 0;
+					}
+					&:hover {
+						color: $teal;
+						cursor: pointer;
+					}
+					&.active {
+						color: $teal;
+						position: relative;
+						transition: 0.4s;
+						&:before {
+							background-color: $teal;
+							border-radius: 25px;
+							content: "";
+							display: flex;
+							height: 0.25rem;
+							margin-right: 0.5rem;
+							transition: 0.4s;
+							width: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.home {
+		.menu-container {
+			border: none;
+			margin-top: 0;
+			padding-top: 3rem;
+			transition: 0.4s;
+		}
+	}
 }
+
 .menu-mobile-container {
-    display: flex;
-    position: relative;
-    z-index: 2;
-    &:before,
-    &:after {
-        background-color: $light-purple;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        width: 45px;
-        z-index: -1;
-    }
-    &:before {
-        left: -2.25rem;
-    }
-    &:after {
-        right: -2.25rem;
-    }
-    &.mobile-active {
-        position: fixed;
-        top: 0;
-        width: calc(100% - 4.5rem);
-    }
-    select {
-        background-color: $light-purple;
-        color: $white;
-        font-size: 1.75rem;
-        left: -5px;
-        padding: 1rem 0;
-        position: relative;
-        width: 100%;
-        option {
-            position: relative;
-            left: 0;
-        }
-    }
+	display: flex;
+	position: relative;
+	z-index: 2;
+	&:before,
+	&:after {
+		background-color: $light-purple;
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 45px;
+		z-index: -1;
+	}
+	&:before {
+		left: -2.25rem;
+	}
+	&:after {
+		right: -2.25rem;
+	}
+	&.mobile-active {
+		position: fixed;
+		top: 0;
+		width: calc(100% - 4.5rem);
+	}
+	select {
+		background-color: $light-purple;
+		color: $white;
+		font-size: 1.75rem;
+		left: -5px;
+		padding: 1rem 0;
+		position: relative;
+		width: 100%;
+		option {
+			position: relative;
+			left: 0;
+		}
+	}
 }

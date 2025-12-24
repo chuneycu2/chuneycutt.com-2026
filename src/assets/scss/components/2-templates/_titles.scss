@@ -1,93 +1,82 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
 // All project overview pages
 .title-container {
-    @include mixins.media-breakpoint-up(md) {
-        padding-bottom: 0;
-    }
-    h1 {
-        padding-bottom: .75rem;
-        transition: none;
-    }
-    h2 {
-        font-size: 1.5rem;
-        padding-bottom: 1rem;
-        transition: none;
-    }
-    .intro {
-        font-size: 1.125rem;
-        padding: 2rem 0 0 0;
-        transition: none;
-    }
-    .project-links {
-        padding-top: 0 !important;
-        .link {
-            a {
-                font-size: 1rem;
-            }
-            &:first-child {
-                a {
-                    svg.icon {
-                        position: relative;
-                        right: 0;
-                        transform: rotate(180deg);
-                        top: 0;
-                    }
-                }
-            }
-        }
-    }
-    &.active {
-        h2 {
-            color: $teal;
-        }
-        .section-intro {
-            color: $white;
-        }
-        a {
-            cursor: pointer;
-            color: $white;
-            svg {
-                fill: $white;
-            }
-            &:hover {
-                color: $teal;
-                svg {
-                    fill: $teal;
-                }
-            }
-        }
-    }
+	@include mixins.media-breakpoint-up(md) {
+		padding-bottom: 0;
+	}
+	h1 {
+		padding-bottom: 0.75rem;
+		transition: none;
+	}
+	h2 {
+		font-size: 1.5rem;
+		padding-bottom: 1rem;
+		transition: none;
+	}
+	.intro {
+		font-size: 1.125rem;
+		padding: 2rem 0 0 0;
+		transition: none;
+	}
+	.project-links {
+		padding: 0;
+		.link {
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+	&.active {
+		h2 {
+			color: $teal;
+			transtion: 0.4s;
+		}
+		.section-intro {
+			color: $white;
+			transtion: 0.4s;
+		}
+		a {
+			cursor: pointer;
+			color: $white;
+			svg {
+				fill: $white;
+			}
+			&:hover {
+				color: $teal;
+				svg {
+					fill: $teal;
+				}
+			}
+		}
+	}
 }
 
 // Home-specific styling
 .home {
-    .title-container {
-        h1 {
-            padding-bottom: .75rem;
-            transition: none;
-        }
-        h2 {
-            padding-bottom: 2rem;
-            transition: none;
-        }
-        .intro {
-            font-size: 1rem;
-            padding: 0;
-            transition: none;
-        }
-        &.section {
-            padding-bottom: 2rem;
-            h2 {
-                padding-bottom: 0;
-            }
-            &.About {
-                padding-bottom: 1.5rem;
-            }
-            .section-intro {
-                padding-top: 1rem;
-            }
-        }
-    }
+	.title-container {
+		h1 {
+			padding-bottom: 0.75rem;
+		}
+		h2 {
+			padding-bottom: 2rem;
+		}
+		.intro {
+			font-size: 1rem;
+			padding: 0;
+		}
+		&.section {
+			padding-bottom: 2rem;
+			h2 {
+				padding-bottom: 0;
+			}
+			&.About {
+				padding-bottom: 1.5rem;
+			}
+			.section-intro {
+				padding-top: 1rem;
+			}
+		}
+	}
 }

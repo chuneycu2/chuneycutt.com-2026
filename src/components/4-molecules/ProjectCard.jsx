@@ -39,7 +39,11 @@ export default function ProjectCard(props) {
 								""
 							)}
 						</div>
-						<div className="card-arrow">
+						{/* <div className="card-arrow">
+							<IconSamePage />
+						</div>*/}
+						<div className="card-cta d-flex align-items-center">
+							<p className="pb-0 pr-1">Read more</p>
 							<IconSamePage />
 						</div>
 					</div>

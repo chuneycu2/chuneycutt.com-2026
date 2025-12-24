@@ -1,47 +1,50 @@
-@use '../../_variables.scss' as *;
-@use '../../base/mixins' as mixins;
+@use "../../_variables.scss" as *;
+@use "../../base/mixins" as mixins;
 
 .project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    padding: 1rem 0 1.25rem 0;
-    position: relative;
-    transition: .4s;
-    @include mixins.media-breakpoint-up(sm) {
-        gap: 0;
-    }
-    .link {
-        align-items: center;
-        display: flex;
-        position: relative;
-        a {
-            align-items: center;
-            display: flex;
-            font-size: .875rem;
-            svg {
-                transition: .4s;
-            }
-        }
-        &._blank {
-            svg {
-                height: .75rem;
-                margin-right: .35rem;
-                width: .75rem;
-            }
-        }
-        &._self {
-            svg {
-                height: .85rem;
-                margin-right: .25rem;
-                width: .85rem;
-            }
-        }
-        &:hover {
-            svg {
-                fill: $teal;
-                transition: .4s;
-            }
-        }
-    }
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	padding: 1rem 0 1.25rem 0;
+	position: relative;
+	transition: 0.4s;
+	@include mixins.media-breakpoint-up(sm) {
+		gap: 0;
+	}
+	.link {
+		align-items: center;
+		display: flex;
+		position: relative;
+		a {
+			align-items: center;
+			display: flex;
+			font-size: 0.875rem;
+			svg {
+				fill: $teal;
+				height: 1rem;
+				margin-right: 0.35rem;
+				width: 1rem;
+				transition: 0.4s;
+			}
+		}
+		&.back {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		&.new {
+			svg {
+				fill: $teal;
+				height: 0.85rem;
+				margin-right: 0.25rem;
+				width: 0.85rem;
+			}
+		}
+		&:hover {
+			svg {
+				fill: $white;
+				transition: 0.4s;
+			}
+		}
+	}
 }

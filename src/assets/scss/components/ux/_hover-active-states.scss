@@ -1,9 +1,9 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
 .section-entries {
-  transition: .4s;
-  /*&:hover {
+	transition: 0.4s;
+	/*&:hover {
     transition: .4s;
     .section-entry:not(.about):not(.skills-and-tools):not(.accolades):not(.overview-section) {
       opacity: .45;
@@ -11,230 +11,268 @@
     }
   }*/
 
-  .section-entry:not(.overview-section) {
+	.section-entry:not(.overview-section) {
+		// Faded background lightbox
+		&:after {
+			background-color: transparent;
+			border-radius: 0.25rem;
+			border-top: 1px solid $white;
+			content: "";
+			display: block;
+			height: calc(100% + 2rem);
+			opacity: 0;
+			left: -1rem;
+			padding: 1rem;
+			position: absolute;
+			top: -1rem;
+			transition: 0.4s;
+			width: calc(100% + 2rem);
+			z-index: 0;
+		}
+		&.active {
+			opacity: 1;
+			transition: 0.4s;
+			h3 {
+				color: $teal;
+				transition: 0.4s;
+			}
+			p,
+			li {
+				color: $white;
+				transition: 0.4s;
+			}
+			a {
+				cursor: pointer;
+				color: $teal;
+				svg {
+					fill: $teal;
+				}
+				&:hover {
+					color: $white;
+					svg {
+						fill: $white;
+					}
+				}
+			}
+			.skill {
+				border: 1px solid $teal;
+				color: $teal;
+				transition: 0.4s;
+				a {
+					color: $teal;
+				}
+			}
+		}
 
-    // Faded background lightbox
-    &:after {
-      background-color: transparent;
-      border-radius: .25rem;
-      border-top: 1px solid $white;
-      content: '';
-      display: block;
-      height: calc(100% + 2rem);
-      opacity: 0;
-      left: -1rem;
-      padding: 1rem;
-      position: absolute;
-      top: -1rem;
-      transition: .4s;
-      width: calc(100% + 2rem);
-      z-index: 0;
-    }
-    &.active {
-      opacity: 1;
-      transition: .4s;
-      h3 {
-        color: $teal;
-      }
-      p, li {
-        color: $white;
-        transition: .4s;
-      }
-      a {
-        cursor: pointer;
-        color: $white;
-        svg {
-          fill: $white;
-        }
-        &:hover {
-          color: $teal;
-          svg {
-            fill: $teal;
-          }
-        }
-      }
-      .skill {
-        border: 1px solid $teal;
-        color: $teal;
-        transition: .4s;
-        a {
-          color: $teal;
-        }
-      }
-    }
+		&.experience {
+			a {
+				color: $gray;
+				svg {
+					fill: $gray;
+				}
+				&:hover {
+					color: $teal;
+					svg {
+						fill: $teal;
+					}
+				}
+			}
+			&.active {
+				a {
+					color: $teal;
+					svg {
+						fill: $teal;
+					}
+					&:hover {
+						color: $white;
+						svg {
+							fill: $white;
+						}
+					}
+				}
+				.entry-container {
+					border-left: 2px solid $teal;
+					transition: 0.4s;
+					&:before {
+						background-color: $teal;
+						transition: 0.4s;
+					}
+				}
+				&:after {
+					background-color: $gray;
+					box-shadow: 0px 1px 2px $black;
+					opacity: 0.15;
+					transition: 0.4s;
+				}
+			}
+		}
 
-    &.experience {
-      &.active {
-        .entry-container {
-          border-left: 2px solid $teal;
-          transition: .4s;
-          &:before {
-            background-color: $teal;
-            transition: .4s;
-          }
-        }
-        &:after {
-          background-color: $gray;
-          box-shadow: 0px 1px 2px $black;
-          opacity: .15;
-          transition: .4s;
-        }
-      }
-    }
+		&.projects,
+		&.project-card {
+			&:hover,
+			&.active {
+				transition: 0.4s;
+				.entry-container {
+					h3 {
+						color: $teal;
+					}
+					p,
+					li {
+						color: $white;
+						transition: 0.4s;
+					}
+					a {
+						cursor: pointer;
+						color: $white;
+						svg {
+							fill: $white;
+						}
+						&:hover {
+							color: $teal;
+							svg {
+								fill: $teal;
+							}
+						}
+					}
+					.skill {
+						border: 1px solid $teal;
+						color: $teal;
+						transition: 0.4s;
+						a {
+							color: $teal;
+						}
+					}
+					.project-thumbnail {
+						img {
+							border: 2px solid $teal;
+							transition: 0.4s;
+						}
+					}
+				}
+				&:after {
+					background-color: $gray;
+					opacity: 0.15;
+					transition: 0.4s;
+				}
+			}
+		}
 
-    &.projects,
-    &.project-card {
-      &:hover,
-      &.active {
-        transition: .4s;
-        .entry-container {
-          h3 {
-            color: $teal;
-          }
-          p, li {
-            color: $white;
-            transition: .4s;
-          }
-          a {
-            cursor: pointer;
-            color: $white;
-            svg {
-              fill: $white;
-            }
-            &:hover {
-              color: $teal;
-              svg {
-                fill: $teal;
-              }
-            }
-          }
-          .skill {
-            border: 1px solid $teal;
-            color: $teal;
-            transition: .4s;
-            a {
-              color: $teal;
-            }
-          }
-          .project-thumbnail {
-            img {
-              border: 2px solid $teal;
-              transition: .4s;
-            }
-          }
-        }
-        &:after {
-          background-color: $gray;
-          opacity: .15;
-          transition: .4s;
-        }
-      }
-    }
+		&.skills-and-tools {
+			&.active {
+				.bio-card {
+					img {
+						border: 1px solid $teal;
+						transition: 0.4s;
+					}
+				}
+				.entry-container {
+					position: relative;
+					.accent-line {
+						&:before {
+							background-color: $teal;
+							transition: 0.25s;
+						}
+					}
+					svg.top-icon {
+						fill: $teal;
+						transition: 0.4s;
+					}
+					blockquote {
+						color: $white;
+						transition: 0.4s;
+					}
+					.skills-container {
+						@include mixins.media-breakpoint-up(sm) {
+							left: 0;
+							transition: 0.4s;
+						}
+						.skill {
+							border: 1px solid $teal;
+							color: $teal;
+							transition: 0.4s;
+							a {
+								color: $teal;
+							}
+						}
+					}
+				}
+				&:after {
+					background-color: unset;
+				}
+			}
+		}
 
-    &.skills-and-tools {
-      &.active {
-        .bio-card {
-          img {
-            border: 1px solid $teal;
-            transition: .4s;
-          }
-        }
-        .entry-container {
-          position: relative;
-          .accent-line {
-            &:before {
-              background-color: $teal;
-              transition: .25s;
-            }
-          }
-          svg.top-icon {
-            fill: $teal;
-            transition: .4s;
-          }
-          blockquote {
-            color: $white;
-            transition: .4s;
-          }
-          .skills-container {
-            @include mixins.media-breakpoint-up(sm) {
-              left: 0;
-              transition: .4s;
-            }
-            .skill {
-              border: 1px solid $teal;
-              color: $teal;
-              transition: .4s;
-              a {
-                color: $teal;
-              }
-            }
-          }
-        }
-        &:after {
-          background-color: unset;
-        }
-      }
-    }
+		&.accolades {
+			&.active {
+				.entry-container {
+					.accent-line {
+						transition: 0.4s;
+						&:before {
+							background-color: $teal;
+							transition: 0.4s;
+						}
+					}
+					svg.top-icon {
+						fill: $teal;
+						transition: 0.4s;
+					}
+					blockquote {
+						color: $white;
+					}
+				}
+				.bio-card {
+					img {
+						border: 2px solid $teal;
+						transition: 0.4s;
+					}
+				}
+			}
+		}
 
-    &.accolades {
-      &.active {
-        .entry-container {
-          .accent-line {
-            transition: .4s;
-            &:before {
-              background-color: $teal;
-              transition: .4s;
-            }
-          }
-          svg.top-icon {
-            fill: $teal;
-            transition: .4s;
-          }
-          blockquote {
-            color: $white;
-          }
-        }
-        .bio-card {
-          img {
-            border: 2px solid $teal;
-            transition: .4s;
-          }
-        }
-      }
-    }
-
-    &.about {
-      &.active {
-        .entry-container {
-          p, ul, ol, li {
-            color: $gray;
-          }
-        }
-        .bio-card {
-          img {
-            border: 2px solid $teal;
-            transition: .4s;
-          }
-          h3 {
-            color: $teal;
-          }
-          .entry-subtitle {
-            color: $white;
-          }
-          a {
-            color: $white;
-            svg {
-              fill: $white;
-            }
-            &:hover {
-              color: $teal;
-              svg {
-                fill: $teal;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+		&.about {
+			&.active {
+				.entry-container {
+					p,
+					ul,
+					ol,
+					li {
+						color: $gray;
+					}
+				}
+				.bio-card {
+					img {
+						border: 2px solid $teal;
+						transition: 0.4s;
+					}
+					h3 {
+						color: $teal;
+						transition: 0.4s;
+					}
+					.entry-subtitle {
+						color: $white;
+					}
+					a {
+						color: $white;
+						svg {
+							fill: $white;
+						}
+						&:hover {
+							color: $teal;
+							svg {
+								fill: $teal;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.overview-section {
+			transtion: 0.4s;
+			&.active {
+				h2 {
+					transtion: 0.4s;
+				}
+			}
+		}
+	}
 }
