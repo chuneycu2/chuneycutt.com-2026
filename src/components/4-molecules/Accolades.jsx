@@ -1,16 +1,9 @@
 import IconQuote from "../5-atoms/icons/IconQuote";
-import CyrusPic from "../../assets/img/cyrus-pic.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Accolades(props) {
-	const { content, media } = props;
-
-	// Get attribution image by filtering for matching ID
-	const attributionImage = media?.filter((img) => {
-		if (img.id === content?.attribution_image) {
-			return img;
-		}
-	});
+	const { content } = props;
+	console.log(content);
 
 	return (
 		<>
@@ -21,9 +14,9 @@ export default function Accolades(props) {
 					<blockquote>{content.accolade}</blockquote>
 					<div className="bio-card d-flex align-items-center">
 						<LazyLoadImage
-							alt={attributionImage[0].source_url}
+							alt={content.attribution_name + " headshot"}
 							height="75"
-							src={attributionImage[0].source_url}
+							src={content.attribution_image_link}
 							width="75"
 						/>
 						<div className="bio">

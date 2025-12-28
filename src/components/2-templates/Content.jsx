@@ -6,7 +6,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks";
 import Footnote from "../3-organisms/Footnotes.jsx";
 
 export default function Content(props) {
-	const { content, media, footnotes } = props;
+	const { content, footnotes } = props;
 
 	const sections = Object.values(content)?.map((sec) => {
 		const title = sec.section_title;
@@ -30,7 +30,7 @@ export default function Content(props) {
 								</div>
 							)}
 							<div className="section-entries">
-								<SectionEntries content={sec} media={media} key={title} />
+								<SectionEntries content={sec} key={title} />
 							</div>
 							{sec.links && (
 								<div className="section-link">

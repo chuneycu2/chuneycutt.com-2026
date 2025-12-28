@@ -15,7 +15,7 @@ export default function Home() {
 	const data = useRouteLoaderData("root-data");
 	const pageData = DataParser(data[0].posts);
 	const slug = pageData[0].slug;
-	const mediaData = data[0]?.media;
+	//const mediaData = data[0]?.media;
 	const thisPage = pageData[0].acf;
 	const { linkedin } = thisPage.social_links;
 
@@ -52,7 +52,6 @@ export default function Home() {
 
 			<Content
 				content={thisPage?.components_react}
-				media={mediaData ? mediaData : ""}
 				isActive={isActive}
 				slug={slug}
 				footnotes={thisPage?.footnotes}
