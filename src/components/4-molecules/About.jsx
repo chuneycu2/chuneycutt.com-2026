@@ -9,7 +9,9 @@ export default function About(props) {
 
 	// Get the WYSIWYG content and sanitize it for good measure
 	const editorContent = content.entries?.map((entry) => entry.wysiwyg);
-	const cleanHTML = DOMPurify.sanitize(editorContent);
+	const cleanHTML = DOMPurify.sanitize(editorContent, {
+		ADD_ATTR: ["target"],
+	});
 
 	const bioCard = content.about_me ? (
 		<div className="bio-card d-flex pb-4">

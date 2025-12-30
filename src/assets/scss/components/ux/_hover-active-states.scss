@@ -154,6 +154,11 @@
 
 		&.project-card {
 			&:hover {
+				a.entry-container {
+					.card-cta > p {
+						color: $teal;
+					}
+				}
 				&:after {
 					background-color: $gray;
 					opacity: 0.15;
