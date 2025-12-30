@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router";
 import ReactGA from "react-ga4";
-import DataAndMediaLoader from "./components/data/DataAndMediaLoader.js";
+import DataLoader from "./components/data/DataLoader.js";
 
 import App from "./App";
 import Home from "./components/1-pages/Home";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
-		loader: DataAndMediaLoader,
+		loader: DataLoader,
 		id: "root-data",
 		HydrateFallback: LoadingElement,
 		ErrorBoundary: ErrorElement,

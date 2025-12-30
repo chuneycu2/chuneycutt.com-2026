@@ -1,8 +1,9 @@
-import { Link, scrollSpy } from "react-scroll";
 import { useEffect } from "react";
+import { Link, scrollSpy } from "react-scroll";
+import { InView } from "react-intersection-observer";
 
 import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+//import MobileNav from "./MobileNav";
 
 export default function Menu(props) {
 	const sections = props.sections;
@@ -20,11 +21,13 @@ export default function Menu(props) {
 					<Link
 						activeClass="active"
 						spy={true}
+						href={sec.section_title.replace(/\s/g, "")}
 						to={sec.section_title.replace(/\s/g, "")}
 						smooth={true}
 						duration={500}
 						offset={-65}
 						spyThrottle={0}
+						//aria-selected={isActive ? true : false}
 					>
 						{sec.section_title}
 					</Link>

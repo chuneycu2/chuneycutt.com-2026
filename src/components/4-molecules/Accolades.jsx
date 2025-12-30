@@ -12,12 +12,12 @@ export default function Accolades(props) {
 				<div className="quote-container">
 					<blockquote>{content.accolade}</blockquote>
 					<div className="bio-card d-flex align-items-center">
-						<LazyLoadImage
+						{/* <LazyLoadImage
 							alt={content.attribution_name + " headshot"}
 							height="75"
 							src={content.attribution_image_link}
 							width="75"
-						/>
+						/>*/}
 						<div className="bio">
 							<h3 className="pb-0">{content.attribution_name}</h3>
 							<p className="entry-subtitle">{content.attribution_title}</p>

@@ -11,12 +11,17 @@ export default function Content(props) {
 	const sections = Object.values(content)?.map((sec) => {
 		const title = sec.section_title;
 		const intro = sec.section_intro;
-
 		const id = sec.section_title.replace(/\s/g, "");
+
 		return (
 			<InView threshold={0} rootMargin={"-60px 0% -90% 0%"} key={id}>
 				{({ ref, inView }) => (
-					<section id={id} ref={ref} className={inView ? "active" : "inactive"}>
+					<section
+						id={id}
+						ref={ref}
+						className={inView ? "active" : "inactive"}
+						aria-selected={inView ? true : false}
+					>
 						<Element
 							type={"react-scroll-element"}
 							name={sec.section_title.replace(/\s/g, "")}
