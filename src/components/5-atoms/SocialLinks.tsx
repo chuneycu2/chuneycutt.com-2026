@@ -3,7 +3,13 @@ import IconGitHub from "./icons/IconGitHub";
 import IconLinkedIn from "./icons/IconLinkedIn";
 
 export default function SocialLinks(props) {
-    const { email, github, linkedin } = props.links;
+    interface SocialLinks {
+        linkedin: string
+        github: string
+        email: string
+    }
+    const { email, github, linkedin }: SocialLinks[] = props.links;
+
     return (
         <aside className="social-links">
             {linkedin && <a href={linkedin} target="_blank"><IconLinkedIn /></a>}
