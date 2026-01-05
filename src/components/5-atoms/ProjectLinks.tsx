@@ -10,7 +10,6 @@ export default function ProjectLinks(props) {
 		link_url: string
 		link_target: string
 	}
-
 	const links: Link[] = props.links;
 
 	const linkItems = links.map((link) => (

@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 
 export default function ProjectSkills(props) {
-	const skills = props.skills;
+	interface Skill {
+		id: string | number
+		skill: string
+		link: string
+	}
+	const skills: Skill[] = props.skills;
+
 	const skillsMap = skills.map((skill) => {
 		if (skill.link !== "") {
 			return (
