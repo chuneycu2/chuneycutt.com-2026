@@ -5,10 +5,12 @@ export default async function DataLoader() {
 	let domain = "https://chuneycutt.wpenginepowered.com";
 	let postsEndpoint = "/wp-json/wp/v2/posts/";
 
+	const publishedPages = "14";
+
 	// await fetch results from posts, then media in sequence
 	async function fetchPosts() {
 		const posts = await fetch(
-			domain + postsEndpoint + "?time=" + timestamp + "&per_page=20",
+			domain + postsEndpoint + "?time=" + timestamp + "&per_page=" + publishedPages,
 		);
 		const postData = await posts.json();
 		console.log(posts);
