@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link, scrollSpy } from "react-scroll";
-import { InView } from "react-intersection-observer";
 
 import DesktopNav from "./DesktopNav";
 //import MobileNav from "./MobileNav";

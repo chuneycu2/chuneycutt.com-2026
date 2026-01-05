@@ -8,8 +8,8 @@ import DataLoader from "./components/data/DataLoader.js";
 import App from "./App";
 import Home from "./components/1-pages/Home";
 import Projects from "./components/1-pages/Projects";
-import LoadingElement from "./components/ux/LoadingElement";
-import ErrorElement from "./components/ux/ErrorElement";
+import LoadingElement from "./components/ux/LoadingElement.tsx";
+import ErrorElement from "./components/ux/ErrorElement.tsx";
 
 const chuneycuttGA4Id = "G-4CHJ8VZ28C";
 ReactGA.initialize(chuneycuttGA4Id);

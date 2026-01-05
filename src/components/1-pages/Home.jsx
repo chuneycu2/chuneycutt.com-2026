@@ -10,6 +10,7 @@ import Content from "../2-templates/Content";
 export default function Home() {
 	// Fetch page and media data if state is empty
 	const data = useRouteLoaderData("root-data");
+	console.log(data);
 	const pageData = DataParser(data[0].posts);
 	const slug = pageData[0].slug;
 	const thisPage = pageData[0].acf;

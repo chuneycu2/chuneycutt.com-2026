@@ -1,4 +1,4 @@
-import { Link, scrollSpy } from 'react-scroll';
+import { scrollSpy } from 'react-scroll';
 import { useEffect } from "react";
 
 export default function DesktopNav(props) {

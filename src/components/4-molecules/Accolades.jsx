@@ -1,5 +1,4 @@
 import IconQuote from "../5-atoms/icons/IconQuote";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Accolades(props) {
 	const { content } = props;
