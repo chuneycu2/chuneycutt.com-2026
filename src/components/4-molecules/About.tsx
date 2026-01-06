@@ -18,7 +18,7 @@ export default function About(props) {
 			<LazyLoadImage
 				alt="Cyrus Huneycutt headshot"
 				height="75"
-				src={CyrusPic && CyrusPic}
+				src={`${CyrusPic}`}
 				width="75"
 			/>
 			<div className="bio">
