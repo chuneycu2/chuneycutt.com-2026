@@ -37,7 +37,10 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+
+    // Project- and package-specific configs
+    "allowSyntheticDefaultImports": true // DOMPurify configs
   },
   "include": ["src/**/*"]
 }
