@@ -9,7 +9,7 @@ import About from "../4-molecules/About";
 import Accolades from "../4-molecules/Accolades";
 
 export default function SectionEntries(props) {
-	const { acf_fc_layout, entries } = props.content;
+	const { acf_fc_layout, entries, key } = props.content;
 	const media = props.media;
 	const type = acf_fc_layout.replace(/_/g, "-");
 
@@ -31,13 +31,12 @@ export default function SectionEntries(props) {
 			return <Accolades content={content} media={media} />;
 	};
 
-	const sectionEntries = entries?.map((entry) => {
+	const sectionEntries = entries?.map((entry, index) => {
 		return (
-			<InView threshold={0} rootMargin={"-100px 0px -80% 0px"} key={entry.id}>
+			<InView key={index} threshold={0} rootMargin={"-100px 0px -80% 0px"}>
 				{({ ref, inView }) => (
 					<article
 						id={entry.id}
-						key={entry.id}
 						ref={ref}
 						className={`section-entry ${type} ${inView ? "active" : "inactive"}`}
 					>
@@ -48,5 +47,9 @@ export default function SectionEntries(props) {
 		);
 	});
 
-	return <>{sectionEntries}</>;
+	return (
+		<div key={key} className="section-entries">
+			{sectionEntries}
+		</div>
+	)
 }
