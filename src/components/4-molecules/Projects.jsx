@@ -8,7 +8,7 @@ export default function Projects(props) {
 
 	return (
 		<div className="entry-container">
-			<Link to={content.project_link}>
+			<Link to={content.project_link} aria-label={`Read more about Cyrus's work on ${content.project_title}`}>
 				<div className="row p-0 m-0">
 					<div className="project-thumbnail col-12 col-sm-3 pl-0 pr-0 pr-sm-3">
 						<LazyLoadImage

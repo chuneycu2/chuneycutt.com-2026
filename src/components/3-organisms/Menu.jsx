@@ -15,19 +15,23 @@ export default function Menu(props) {
 	}, []);
 
 	const navItems = Object.values(sections)?.map((sec) => {
+
+		const title = sec.section_title.replace(/\s/g, "");
+
 		if (sec.section_title) {
 			return (
 				<li key={sec.section_title}>
 					<Link
 						activeClass="active"
 						spy={true}
-						href={sec.section_title.replace(/\s/g, "")}
-						to={sec.section_title.replace(/\s/g, "")}
+						href={title}
+						to={title}
 						smooth={true}
 						duration={500}
 						offset={-65}
 						spyThrottle={0}
-						//aria-selected={isActive ? true : false}
+						//aria-current={isActive ? "location" : undefined}
+						aria-label={`Scroll to ${title}`}
 					>
 						{sec.section_title}
 					</Link>

@@ -14,7 +14,7 @@ export default function Sections(props) {
         return (
             <InView key={id} threshold={0} rootMargin={"-60px 0% -90% 0%"}>
                 {({ ref, inView }) => (
-                    <section id={id} ref={ref} className={inView ? "active" : "inactive"} aria-selected={inView}>
+                    <section id={id} ref={ref} className={inView ? "active" : "inactive"} aria-current={inView ? 'location' : undefined}>
                         <Element type={"react-scroll-element"} name={sec.section_title.replace(/\s/g, "")}>
 
                             {/* Section title */}

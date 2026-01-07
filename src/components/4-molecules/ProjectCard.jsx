@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
 
 		return (
 			<article key={cardContent.id} className="project-card section-entry">
-				<Link to={cardLink} className="entry-container">
+				<Link to={cardLink} className="entry-container" aria-label={`Read more about Cyrus's work on ${cardContent.project_title}`}>
 					<div
 						className="card-image"
 						style={{
