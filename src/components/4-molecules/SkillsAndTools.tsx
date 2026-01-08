@@ -1,12 +1,13 @@
-import ProjectSkills from "../5-atoms/ProjectSkills";
+import ProjectSkills from "../5-atoms/ProjectSkills.tsx";
 import IconDevelopment from "../5-atoms/icons/IconDevelopment.tsx";
 import IconDesign from "../5-atoms/icons/IconDesign.tsx";
 import IconAnalytics from "../5-atoms/icons/IconAnalytics.tsx";
 import IconGear from "../5-atoms/icons/IconGear.tsx";
+import type SkillCategory from "../types/post.d.ts";
 
 export default function SkillsAndTools(props) {
 
-    const { icon, discipline, type } = props.content;
+    const { id, icon, discipline, type }: SkillCategory[] = props.content;
 
     const getIcon = (category) => {
         if (category === "development") return <IconDevelopment type={"top-icon"} />
@@ -16,7 +17,7 @@ export default function SkillsAndTools(props) {
     }
 
     const categorySkills = type.map((section) => (
-        <div key={section.skills_type} className="skills-category">
+        <div key={id} className="skills-category">
             <p className="entry-subtitle">{section.skills_type}</p>
             <ProjectSkills skills={section.skills} />
         </div>

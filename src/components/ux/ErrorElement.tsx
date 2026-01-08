@@ -1,9 +1,11 @@
 import { useRouteError, isRouteErrorResponse } from "react-router";
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
+import type Anchor from "../types/post.d.ts";
+
 export default function ErrorElement() {
 	const error = useRouteError();
-	const home = [
+	const home: Anchor[] = [
 		{
 			link_text: "Return home",
 			link_icon: "back",

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import ProjectSkills from "../5-atoms/ProjectSkills";
+import ProjectSkills from "../5-atoms/ProjectSkills.tsx";
+import type ProjectEntry from "../types/post.d.ts";
 
 export default function Projects(props) {
-	const { content } = props;
+
+	const { content }: ProjectEntry[] = props;
 
 	return (
 		<div className="entry-container">

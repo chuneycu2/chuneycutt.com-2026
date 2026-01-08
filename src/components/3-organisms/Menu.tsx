@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Link, scrollSpy } from "react-scroll";
-
 import DesktopNav from "./DesktopNav.tsx";
 //import MobileNav from "./MobileNav";
+import type ComponentsReact from "../types/post.d.ts";
 
 export default function Menu(props) {
-	const sections = props.sections;
+
+	const sections: ComponentsReact[] = props.sections;
 
 	useEffect(() => {
 		setTimeout(function () {

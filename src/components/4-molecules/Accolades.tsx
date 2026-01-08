@@ -1,7 +1,9 @@
 import IconQuote from "../5-atoms/icons/IconQuote.tsx";
+import type AccoladeEntry from "../types/post.d.ts";
 
 export default function Accolades(props) {
-	const { content } = props;
+
+	const { content }:AccoladeEntry[] = props;
 
 	return (
 		<>

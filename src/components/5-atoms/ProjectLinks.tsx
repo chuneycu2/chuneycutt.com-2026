@@ -1,16 +1,11 @@
 import { Link } from "react-router-dom";
-
 import IconNewPage from "./icons/IconNewPage.tsx";
 import IconSamePage from "./icons/IconSamePage.tsx";
+import type Anchor from "../types/post.d.ts"
 
 export default function ProjectLinks(props) {
-	interface Link {
-		link_icon: string
-		link_text: string
-		link_url: string
-		link_target: string
-	}
-	const links: Link[] = props.links;
+
+	const links: Anchor[] = props.links;
 
 	const linkItems = links.map((link) => (
 		<div

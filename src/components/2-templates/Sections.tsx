@@ -2,9 +2,11 @@ import { Element } from "react-scroll";
 import { InView } from "react-intersection-observer";
 import SectionEntries from "../3-organisms/SectionEntries.tsx";
 import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
+import type ComponentsReact from "../types/post.js";
 
 export default function Sections(props) {
-    const content = props.content;
+
+    const content:ComponentsReact[] = props.content;
 
     const sections = Object.values(content)?.map((sec) => {
         const title = sec.section_title;

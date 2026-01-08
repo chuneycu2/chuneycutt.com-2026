@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { useRouteLoaderData } from "react-router";
 import DataParser from "../data/DataParser.ts";
-
 import ProjectCard from "../4-molecules/ProjectCard.tsx";
 import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
+import type Acf from "../types/post.d.ts";
 
 export default function Projects() {
-	// Fetch page and media data
+
+	// Fetch page data
 	const data = useRouteLoaderData("root-data");
 	const pageData = DataParser(data[0].posts);
 	const mediaData = data[0].media;
-	const thisPage = pageData[0].acf;
+	const thisPage:Acf[] = pageData[0].acf;
 
 	// Set page title
 	useEffect(() => {

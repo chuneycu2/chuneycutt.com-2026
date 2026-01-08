@@ -1,14 +1,11 @@
-import IconEmail from "./icons/IconEmail";
-import IconGitHub from "./icons/IconGitHub";
-import IconLinkedIn from "./icons/IconLinkedIn";
+import IconEmail from "./icons/IconEmail.tsx";
+import IconGitHub from "./icons/IconGitHub.tsx";
+import IconLinkedIn from "./icons/IconLinkedIn.tsx";
+import type Socials from "../types/post.d.ts";
 
 export default function SocialLinks(props) {
-    interface SocialLinks {
-        linkedin: string
-        github: string
-        email: string
-    }
-    const { email, github, linkedin }: SocialLinks[] = props.links;
+
+    const { email, github, linkedin }: Socials[] = props.links;
 
     return (
         <aside className="social-links">

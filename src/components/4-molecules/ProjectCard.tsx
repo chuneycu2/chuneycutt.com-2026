@@ -1,9 +1,11 @@
 import ProjectSkills from "../5-atoms/ProjectSkills.tsx";
 import IconSamePage from "../5-atoms/icons/IconSamePage.tsx";
 import { Link } from "react-router-dom";
+import type ProjectEntry from "../types/post.d.ts";
 
 export default function ProjectCard(props) {
-	const { content } = props;
+
+	const { content }:ProjectEntry[] = props;
 
 	const cards = content.map((card) => {
 		// get the single entry within each ACF flexible content layout

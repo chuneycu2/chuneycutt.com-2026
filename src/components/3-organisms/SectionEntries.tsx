@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 import { scrollSpy } from "react-scroll";
 import { InView } from "react-intersection-observer";
-
 import Experiences from "../4-molecules/Experiences.tsx";
 import SkillsAndTools from "../4-molecules/SkillsAndTools.tsx";
 import Projects from "../4-molecules/Projects.tsx";
 import About from "../4-molecules/About.tsx";
 import Accolades from "../4-molecules/Accolades.tsx";
+import type ComponentsReact from "../types/post.d.ts"
 
 export default function SectionEntries(props) {
-	const { acf_fc_layout, entries, key } = props.content;
+
+	const { acf_fc_layout, entries, key }:ComponentsReact[] = props.content;
 	const media = props.media;
 	const type = acf_fc_layout.replace(/_/g, "-");
 
@@ -20,7 +21,8 @@ export default function SectionEntries(props) {
 	}, []);
 
 	const entryTemplate = (content) => {
-		if (type === "experience") return <Experiences content={content} />;
+		if (type === "experience")
+			return <Experiences content={content} />;
 		if (type === "skills-and-tools")
 			return <SkillsAndTools content={content} />;
 		if (type === "projects")

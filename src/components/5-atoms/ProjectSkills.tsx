@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
+import type Skill from "../types/post.d.ts"
 
 export default function ProjectSkills(props) {
-	interface Skill {
-		id: string | number
-		skill: string
-		link: string
-	}
+
 	const skills: Skill[] = props.skills;
 
 	const skillsMap = skills.map((skill) => {

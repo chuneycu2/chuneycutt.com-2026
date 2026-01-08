@@ -1,13 +1,14 @@
-import DOMPurify from "dompurify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import DOMPurify from "dompurify";
 import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
 import CyrusPic from "../../assets/img/cyrus-pic.jpg";
+import type {AboutEntry, OverviewEntry} from "../types/post.js";
 
 export default function About(props) {
-	const content = props.content;
 
-	// Get the WYSIWYG content and sanitize it for good measure
+	const content: AboutEntry[] | OverviewEntry[] = props.content;
+
+	// Get the WYSIWYG content and sanitize it
 	const editorContent = content.entries?.map((entry) => entry.wysiwyg);
 	const cleanHTML: string = DOMPurify.sanitize(editorContent, {
 		ADD_ATTR: ["target"],
