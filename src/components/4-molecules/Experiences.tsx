@@ -1,5 +1,5 @@
-import ProjectLinks from "../5-atoms/ProjectLinks";
-import ProjectSkills from "../5-atoms/ProjectSkills";
+import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
+import ProjectSkills from "../5-atoms/ProjectSkills.tsx";
 
 export default function Experiences(props) {
     const { job_title, company, years, overview, links, skills, isActive } = props.content;

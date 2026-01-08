@@ -1,4 +1,4 @@
-import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
+import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
 
 export default function Titles(props) {
 	return (

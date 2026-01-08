@@ -1,5 +1,5 @@
-import ProjectSkills from "../5-atoms/ProjectSkills";
-import IconSamePage from "../5-atoms/icons/IconSamePage";
+import ProjectSkills from "../5-atoms/ProjectSkills.tsx";
+import IconSamePage from "../5-atoms/icons/IconSamePage.tsx";
 import { Link } from "react-router-dom";
 
 export default function ProjectCard(props) {

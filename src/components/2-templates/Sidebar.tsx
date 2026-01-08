@@ -1,6 +1,6 @@
 import Titles from "./Titles.js";
-import Menu from "../3-organisms/Menu.js";
-import SocialLinks from "../5-atoms/SocialLinks.jsx";
+import Menu from "../3-organisms/Menu.tsx";
+import SocialLinks from "../5-atoms/SocialLinks.tsx";
 
 export default function Sidebar(props) {
     const { name, title, intro, slug, links, sections, socials } = props;

@@ -1,4 +1,4 @@
-import IconQuote from "../5-atoms/icons/IconQuote";
+import IconQuote from "../5-atoms/icons/IconQuote.tsx";
 
 export default function Accolades(props) {
 	const { content } = props;

@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useRouteLoaderData } from "react-router";
 
 import DataParser from "../data/DataParser";
-import Sidebar from "../2-templates/Sidebar.js";
-import Content from "../2-templates/Content.js";
+import Sidebar from "../2-templates/Sidebar.tsx";
+import Content from "../2-templates/Content.tsx";
 
 export default function Home() {
 

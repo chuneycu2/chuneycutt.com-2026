@@ -3,11 +3,11 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router";
 import ReactGA from "react-ga4";
-import DataLoader from "./components/data/DataLoader.js";
+import DataLoader from "./components/data/DataLoader.ts";
 
 import App from "./App";
-import Home from "./components/1-pages/Home";
-import Projects from "./components/1-pages/Projects";
+import Home from "./components/1-pages/Home.js";
+import Projects from "./components/1-pages/Projects.tsx";
 import LoadingElement from "./components/ux/LoadingElement.tsx";
 import ErrorElement from "./components/ux/ErrorElement.tsx";
 

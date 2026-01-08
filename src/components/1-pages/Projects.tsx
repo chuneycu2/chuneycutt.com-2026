@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useRouteLoaderData } from "react-router";
-import DataParser from "../data/DataParser.js";
+import DataParser from "../data/DataParser.ts";
 
-import ProjectCard from "../4-molecules/ProjectCard";
-import ProjectLinks from "../5-atoms/ProjectLinks";
+import ProjectCard from "../4-molecules/ProjectCard.tsx";
+import ProjectLinks from "../5-atoms/ProjectLinks.tsx";
 
 export default function Projects() {
 	// Fetch page and media data
