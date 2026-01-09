@@ -94,7 +94,9 @@ export interface AboutEntry {
 }
 
 export interface OverviewEntry {
-    wysiwyg: string
+    type?: string
+    wysiwyg?: string
+    code_block?: string
 }
 
 export interface Anchor {
