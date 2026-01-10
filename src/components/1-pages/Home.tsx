@@ -23,13 +23,8 @@ export default function Home() {
 	return (
 		<div className={`container-main ${slug} row m-0`}>
 			<Sidebar
-				name={thisPage.name}
-				title={thisPage.title}
-				intro={thisPage.intro}
+				content={thisPage}
 				slug={slug}
-				links={thisPage.links}
-				sections={thisPage.components_react}
-				socials={thisPage.social_links}
 			/>
 			<Content
 				content={thisPage.components_react}

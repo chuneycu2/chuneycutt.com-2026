@@ -6,6 +6,7 @@ import SkillsAndTools from "../4-molecules/SkillsAndTools.tsx";
 import Projects from "../4-molecules/Projects.tsx";
 import About from "../4-molecules/About.tsx";
 import Accolades from "../4-molecules/Accolades.tsx";
+import ErrorElement from "../ux/ErrorElement.tsx";
 import type ComponentsReact from "../types/post.d.ts"
 
 export default function SectionEntries(props) {
@@ -21,16 +22,22 @@ export default function SectionEntries(props) {
 	}, []);
 
 	const entryTemplate = (content) => {
-		if (type === "experience")
-			return <Experiences content={content} />;
-		if (type === "skills-and-tools")
-			return <SkillsAndTools content={content} />;
-		if (type === "projects")
-			return <Projects content={content} media={media} />;
-		if (type === "about" || type === "overview-section")
-			return <About content={props.content} type={type} />;
-		if (type === "accolades")
-			return <Accolades content={content} media={media} />;
+		switch (type) {
+			case 'experience' :
+				return <Experiences content={content}/>;
+			case 'skills-and-tools' :
+				return <SkillsAndTools content={content}/>;
+			case 'projects' :
+				return <Projects content={content} media={media}/>;
+			case 'about' :
+				return <About content={props.content} type={type}/>;
+			case 'overview-section':
+				return <About content={props.content} type={type}/>;
+			case 'accolades' :
+				return <Accolades content={content} media={media}/>;
+			default:
+				return <ErrorElement/>
+		}
 	};
 
 	const sectionEntries = entries?.map((entry, index) => {

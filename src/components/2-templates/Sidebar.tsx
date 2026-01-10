@@ -9,18 +9,19 @@ export default function Sidebar(props) {
         name,
         title,
         intro,
-        slug,
         links,
-        sections,
-        socials
-    }:MenuSidebar[] = props;
+        components_react,
+        social_links
+    }:MenuSidebar[] = props.content;
+
+    const slug: string = props.slug;
 
     return (
         <section className={`sidebar ${slug} col-12 col-md-4`}>
             <Titles name={name} title={title} intro={intro} links={links} />
-            <Menu sections={sections} />
-            {(socials.linkedin || socials.github || socials.email) && (
-                <SocialLinks links={socials} />
+            <Menu sections={components_react} />
+            {(social_links.linkedin || social_links.github || social_links.email) && (
+                <SocialLinks links={social_links} />
             )}
         </section>
     )
