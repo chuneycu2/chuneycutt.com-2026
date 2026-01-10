@@ -49,7 +49,7 @@ export default function About(props) {
 		<div className="entry-container fade fade-in">
 			{bioCard && bioCard}
 			{cleanHTML && <div className="section-content" dangerouslySetInnerHTML={{__html: cleanHTML}}></div>}
-			{codeContent !== '' &&
+			{codeContent &&
 				<SyntaxHighlighter
 					language="javascript"
 					style={okaidia}
